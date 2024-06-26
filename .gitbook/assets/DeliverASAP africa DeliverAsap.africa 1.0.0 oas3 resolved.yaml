@@ -1,0 +1,758 @@
+---
+openapi: 3.0.0
+info:
+  title: DeliverASAP
+  description: ""
+  contact: {}
+  version: 1.0.0-oas3
+  x-codegen-settings:
+    Nullify404: false
+    GenerateAsyncCode: true
+    UseMethodPrefix: false
+    UseModelPostfix: false
+    UseControllerPrefix: true
+    UseEnumPostfix: true
+    CollectParameters: false
+    UseConstructorsForConfig: false
+    UseCommonSDKLibrary: false
+    iOSUseAppInfoPlist: false
+    AndroidUseAppManifest: false
+    BodySerialization: 0
+    EnableAdditionalModelProperties: false
+    PreserveParameterOrder: true
+    AppendContentHeaders: true
+    iOSGenerateCoreData: false
+    GenerateInterfaces: false
+    NodeHttpClient: NODE_REQUEST
+    ValidateRequiredParameters: false
+    JavaUsePropertiesConfig: false
+    Timeout: 0
+    StoreTimezoneInformation: false
+    EnablePHPComposerVersionString: false
+    EnableLogging: false
+    ArraySerialization: Indexed
+    ModelSerializationScheme: Json
+    UseExceptionPrefix: true
+    RunscopeEnabled: false
+    AndroidHttpClient: ANDROID_OK
+    ObjCHttpClient: UNIREST
+    CSharpHttpClient: UNIREST
+    PHPHttpClient: UNIREST
+    JavaHttpClient: JAVA_OK
+    ParameterArrayFormat: ParamArrayWithIndex
+    SecurityProtocols:
+    - Ssl3
+    - Tls
+    GenerateTravisConfig: false
+    GenerateCircleConfig: false
+    GenerateAppveyorConfig: false
+    GenerateJenkinsConfig: false
+    EnableHttpCache: false
+    Retries: 0
+    RetryInterval: 1
+    GenerateAdvancedDocs: true
+    UnderscoreNumbers: true
+    UseSingletonPattern: true
+    DisableLinting: false
+    ApplyCustomizations: []
+    SortResources: false
+    AllowSkippingSSLCertVerification: false
+    DoNotSplitWords: []
+    EnableGlobalUserAgent: true
+    ReturnCompleteHttpResponse: false
+    GenerateModels: true
+    GenerateExceptions: true
+    IgnoreIfNullJson: false
+    DisableDocs: false
+    LiftParameterDescriptionFromCustomType: false
+    ThrowForHttpErrorStatusCodes: true
+    ResponseMapping:
+      Type: Simple
+    ForceKeywordArgsInRuby: false
+    SymbolizeHashKeysInRuby: false
+    UsageExampleEndpoint:
+      Description: ""
+      EndpointGroupName: ""
+      EndpointName: ""
+    IsLatestVersion: false
+    EnableImmutableModels: false
+    GenerateEnums: true
+    BackoffFactor: 2
+    StatusCodesToRetry:
+    - 408
+    - 413
+    - 429
+    - 500
+    - 502
+    - 503
+    - 504
+    - 521
+    - 522
+    - 524
+    RequestMethodsToRetry:
+    - GET
+    - PUT
+    UserConfigurableRetries: true
+    UseEndpointMethodName: false
+    EncodeTemplateParameters: true
+    GenerateExamplesForOptionalFields: false
+    MultitargetDotnetVersions: false
+    BackoffMax: 0
+    RetryOnTimeout: true
+    EnableCookies: false
+    EnableJsonPassThroughForAny: false
+    PascalCaseEnumForCSharp: false
+    PascalCaseEnumForTypeScript: false
+    EnableExperimentalTypeCombinatorGeneration: false
+    ErrorTemplates: {}
+  x-server-configuration:
+    default-environment: Base Environment
+    default-server: Server 1
+    environments:
+    - name: Base Environment
+      servers:
+      - name: Server 1
+        url: http://deliverasap.africa/api
+      - name: Server 2
+        url: https://deliverasap.africa/api/address
+      - name: Server 3
+        url: http://deliverasap.test/api/address
+    parameters: []
+  x-image-uri: ""
+servers:
+- url: http://deliverasap.africa/api
+- url: https://deliverasap.africa/api/address
+- url: http://deliverasap.test/api/address
+tags:
+- name: Parcel
+  description: ""
+- name: Address
+  description: ""
+- name: DeliverASAP
+  description: ""
+paths:
+  /parcel/1:
+    get:
+      tags:
+      - Parcel
+      summary: Get Single Parcel
+      description: ""
+      operationId: GetSingleParcel
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          content:
+            text/plain:
+              schema:
+                x-is-dynamic: true
+      deprecated: false
+      security:
+      - bearer: []
+      servers:
+      - url: http://deliverasap.africa/api
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+        ErrorTemplates: {}
+        SkipAdditionalHeaders: false
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /parcel/1
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          statusCode: "200"
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get Single Parcel
+        x-testDescription: ""
+      x-server-name: Server 1
+  /parcel:
+    get:
+      tags:
+      - Parcel
+      summary: Get Parcel
+      description: ""
+      operationId: GetParcel
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          content:
+            text/plain:
+              schema:
+                x-is-dynamic: true
+      deprecated: false
+      security:
+      - bearer: []
+      servers:
+      - url: http://deliverasap.africa/api
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+        ErrorTemplates: {}
+        SkipAdditionalHeaders: false
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /parcel
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          statusCode: "200"
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get Parcel
+        x-testDescription: ""
+      x-server-name: Server 1
+  /save:
+    post:
+      tags:
+      - Address
+      summary: Add Address
+      description: ""
+      operationId: AddAddress
+      parameters: []
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/save_body'
+            example:
+              first_name: Emmanuel
+              last_name: Towoju
+              name: Emmanuel Towoju
+              phone: "09010031860"
+              email: towojuads@gmail.com
+              city_id: 1
+              state_id: 1
+              country_id: 1
+              address_line1: 30 ABC Orjiako street
+              address_line2: "Trademore Estate, Lugbe"
+              zip_code: 900901
+              meta_data:
+                Date: 2023-01-21T00:00:00.000Z
+        required: true
+      responses:
+        "200":
+          description: ""
+          content:
+            text/plain:
+              schema:
+                x-is-dynamic: true
+      deprecated: false
+      security:
+      - bearer: []
+      servers:
+      - url: https://deliverasap.africa/api/address
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+        ErrorTemplates: {}
+        SkipAdditionalHeaders: false
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /save
+          headers:
+            Content-Type: application/json
+          body: |-
+            {
+
+              "first_name": "Emmanuel",
+
+              "last_name": "Towoju",
+
+              "name": "Emmanuel Towoju",
+
+              "phone": "09010031860",
+
+              "email": "towojuads@gmail.com",
+
+              "city_id": 1,
+
+              "state_id": 1,
+
+              "country_id": 1,
+
+              "address_line1": "30 ABC Orjiako street",
+
+              "address_line2": "Trademore Estate, Lugbe",
+
+              "zip_code": 900901,
+
+              "meta_data": {
+
+                "Date": "2023-01-21"
+
+              }
+
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          statusCode: "200"
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Add Address
+        x-testDescription: ""
+      x-server-name: Server 2
+  /address:
+    get:
+      tags:
+      - Address
+      summary: Get Addresses
+      description: ""
+      operationId: GetAddresses
+      parameters:
+      - name: Content-Type
+        in: header
+        description: ""
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: application/json
+      responses:
+        "200":
+          description: ""
+          content:
+            text/plain:
+              schema:
+                x-is-dynamic: true
+      deprecated: false
+      security:
+      - bearer: []
+      servers:
+      - url: http://deliverasap.africa/api
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+        ErrorTemplates: {}
+        SkipAdditionalHeaders: false
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /address
+          headers:
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          statusCode: "200"
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get Addresses
+        x-testDescription: ""
+      x-server-name: Server 1
+  /address/4:
+    get:
+      tags:
+      - Address
+      summary: Get Single Addresses
+      description: ""
+      operationId: GetSingleAddresses
+      parameters:
+      - name: Content-Type
+        in: header
+        description: ""
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          example: application/json
+      responses:
+        "200":
+          description: ""
+          content:
+            text/plain:
+              schema:
+                x-is-dynamic: true
+      deprecated: false
+      security:
+      - bearer: []
+      servers:
+      - url: http://deliverasap.africa/api
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+        ErrorTemplates: {}
+        SkipAdditionalHeaders: false
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /address/4
+          headers:
+            Content-Type: application/json
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          statusCode: "200"
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get Single Addresses
+        x-testDescription: ""
+      x-server-name: Server 1
+    delete:
+      tags:
+      - Address
+      summary: Delete Address
+      description: ""
+      operationId: DeleteAddress
+      parameters:
+      - name: Content-Type
+        in: header
+        description: ""
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+          enum:
+          - application/json
+      responses:
+        "200":
+          description: ""
+          content:
+            text/plain:
+              schema:
+                x-is-dynamic: true
+      deprecated: false
+      security:
+      - bearer: []
+      servers:
+      - url: http://deliverasap.africa/api
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+        ErrorTemplates: {}
+        SkipAdditionalHeaders: false
+      x-unitTests:
+      - request:
+          method: DELETE
+          uri: /address/4
+          headers:
+            Content-Type: application/json
+          body: |-
+            {
+
+              "id": "4"
+
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          statusCode: "200"
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Delete Address
+        x-testDescription: ""
+      x-server-name: Server 1
+  /1:
+    put:
+      tags:
+      - Address
+      summary: Update Address
+      description: ""
+      operationId: UpdateAddress
+      parameters: []
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/1_body'
+            example:
+              first_name: Emmanuel
+              last_name: Adedayo
+              name: Emmanuel Towoju
+              phone: "09010031860"
+              email: towojuads@gmail.com
+              city_id: 1
+              state_id: 1
+              country_id: 1
+              address_line1: 30 ABC Orjiako street
+              address_line2: "Trademore Estate, Lugbe"
+              zip_code: 900901
+              meta_data:
+                Date: 2023-01-21T00:00:00.000Z
+        required: true
+      responses:
+        "200":
+          description: ""
+          content:
+            text/plain:
+              schema:
+                x-is-dynamic: true
+      deprecated: false
+      security:
+      - bearer: []
+      servers:
+      - url: http://deliverasap.test/api/address
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+        ErrorTemplates: {}
+        SkipAdditionalHeaders: false
+      x-unitTests:
+      - request:
+          method: PUT
+          uri: /1
+          headers:
+            Content-Type: application/json
+          body: |-
+            {
+
+              "first_name": "Emmanuel",
+
+              "last_name": "Adedayo",
+
+              "name": "Emmanuel Towoju",
+
+              "phone": "09010031860",
+
+              "email": "towojuads@gmail.com",
+
+              "city_id": 1,
+
+              "state_id": 1,
+
+              "country_id": 1,
+
+              "address_line1": "30 ABC Orjiako street",
+
+              "address_line2": "Trademore Estate, Lugbe",
+
+              "zip_code": 900901,
+
+              "meta_data": {
+
+                "Date": "2023-01-21"
+
+              }
+
+            }
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: NONE
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          statusCode: "200"
+          headers: {}
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Update Address
+        x-testDescription: ""
+      x-server-name: Server 3
+components:
+  schemas:
+    AddAddressRequest:
+      title: AddAddressRequest
+      required:
+      - address_line1
+      - address_line2
+      - city_id
+      - country_id
+      - email
+      - first_name
+      - last_name
+      - meta_data
+      - name
+      - phone
+      - state_id
+      - zip_code
+      type: object
+      properties:
+        first_name:
+          type: string
+        last_name:
+          type: string
+        name:
+          type: string
+        phone:
+          type: string
+        email:
+          type: string
+        city_id:
+          type: integer
+          format: int32
+        state_id:
+          type: integer
+          format: int32
+        country_id:
+          type: integer
+          format: int32
+        address_line1:
+          type: string
+        address_line2:
+          type: string
+        zip_code:
+          type: integer
+          format: int32
+        meta_data:
+          type: object
+      example:
+        first_name: Emmanuel
+        last_name: Towoju
+        name: Emmanuel Towoju
+        phone: "09010031860"
+        email: towojuads@gmail.com
+        city_id: 1
+        state_id: 1
+        country_id: 1
+        address_line1: 30 ABC Orjiako street
+        address_line2: "Trademore Estate, Lugbe"
+        zip_code: 900901
+        meta_data:
+          Date: 2023-01-21T00:00:00.000Z
+    UpdateAddressRequest:
+      title: UpdateAddressRequest
+      required:
+      - address_line1
+      - address_line2
+      - city_id
+      - country_id
+      - email
+      - first_name
+      - last_name
+      - meta_data
+      - name
+      - phone
+      - state_id
+      - zip_code
+      type: object
+      properties:
+        first_name:
+          type: string
+        last_name:
+          type: string
+        name:
+          type: string
+        phone:
+          type: string
+        email:
+          type: string
+        city_id:
+          type: integer
+          format: int32
+        state_id:
+          type: integer
+          format: int32
+        country_id:
+          type: integer
+          format: int32
+        address_line1:
+          type: string
+        address_line2:
+          type: string
+        zip_code:
+          type: integer
+          format: int32
+        meta_data:
+          type: object
+      example:
+        first_name: Emmanuel
+        last_name: Adedayo
+        name: Emmanuel Towoju
+        phone: "09010031860"
+        email: towojuads@gmail.com
+        city_id: 1
+        state_id: 1
+        country_id: 1
+        address_line1: 30 ABC Orjiako street
+        address_line2: "Trademore Estate, Lugbe"
+        zip_code: 900901
+        meta_data:
+          Date: 2023-01-21T00:00:00.000Z
+    DeleteAddressRequest:
+      title: DeleteAddressRequest
+      required:
+      - id
+      type: object
+      properties:
+        id:
+          type: string
+      example:
+        id: "4"
+    save_body:
+      allOf:
+      - $ref: '#/components/schemas/AddAddressRequest'
+      - example:
+          first_name: Emmanuel
+          last_name: Towoju
+          name: Emmanuel Towoju
+          phone: "09010031860"
+          email: towojuads@gmail.com
+          city_id: 1
+          state_id: 1
+          country_id: 1
+          address_line1: 30 ABC Orjiako street
+          address_line2: "Trademore Estate, Lugbe"
+          zip_code: 900901
+          meta_data:
+            Date: 2023-01-21T00:00:00.000Z
+    "1_body":
+      allOf:
+      - $ref: '#/components/schemas/UpdateAddressRequest'
+      - example:
+          first_name: Emmanuel
+          last_name: Adedayo
+          name: Emmanuel Towoju
+          phone: "09010031860"
+          email: towojuads@gmail.com
+          city_id: 1
+          state_id: 1
+          country_id: 1
+          address_line1: 30 ABC Orjiako street
+          address_line2: "Trademore Estate, Lugbe"
+          zip_code: 900901
+          meta_data:
+            Date: 2023-01-21T00:00:00.000Z
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
