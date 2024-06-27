@@ -28,4 +28,3 @@
   * [Countries](misc./countries.md)
   * [States](misc./states.md)
   * [City](misc./city.md)
-* [Page](page.md)

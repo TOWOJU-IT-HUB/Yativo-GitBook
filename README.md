@@ -6,10 +6,12 @@ coverY: 0
 
 # Yativo
 
-At Yativo, we are dedicated to revolutionizing the landscape of global commerce through our cutting-edge API solutions tailored specifically for business use. Our mission is not just about building connections; it's about constructing an expansive superhighway that seamlessly links the world to the vibrant markets of Latin America.
+Welcome to Yativo!
 
-Through our innovative API platform, we provide businesses with the tools and infrastructure necessary to navigate the complexities of international trade effortlessly. Whether you're a Latin American company looking to expand your reach abroad or a foreign entity eager to tap into the lucrative opportunities within LATAM, our API empowers you to streamline operations, optimize efficiency, and unlock untapped potential.
+Our documentation will walk you from the basics (authentication, request structure) to using and creating financial products (accounts, cards, payments etc.).
 
-With Yativo's API at your disposal, you can transcend geographical boundaries and access a wealth of resources, insights, and partnerships that propel your business towards unparalleled growth and success. From seamless payment processing to real-time market analysis, our comprehensive suite of API services is designed to cater to your every need, ensuring that you stay ahead of the curve in today's rapidly evolving global marketplace.
+Yativo treats each client as a standalone _organization_. You may log into your Yativo Dashboard to manage your organization's API tokens, users, applications, customers, accounts and more.
 
-Join us as we redefine the future of commerce, one API call at a time. Experience the power of connectivity with Yativo, and unlock a world of possibilities for your business.
+Ready to get started? [Reach out to us](https://yativo.com/contact/) to receive immediate access to our Sandbox and start building with Yativo.
+
+The introduction covers basic concepts you should be familiar with in order to make the most out of the platform.
