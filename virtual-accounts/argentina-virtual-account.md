@@ -1,6 +1,6 @@
 # Argentina Virtual Account
 
-#### Create ARVirtual Account Documentation
+#### Create Argentina Virtual Account Documentation
 
 **Overview**
 
@@ -70,4 +70,4 @@ In case of errors, the response will include an appropriate status code and an e
 * Ensure that the provided document ID and type are accurate and valid.
 * The currency parameter is optional and defaults to "ARS" if not specified.
 
-This documentation should guide developers on how to effectively utilize the Create ARVirtual Account endpoint to create virtual accounts for customers in Argentina.
+This documentation should guide developers on how to effectively utilize the Create Argentina Virtual Account endpoint to create virtual accounts for customers in Argentina.
