@@ -31,3 +31,8 @@
     * [Countries](api-reference/misc./countries.md)
     * [States](api-reference/misc./states.md)
     * [City](api-reference/misc./city.md)
+
+## Beneficiaries
+
+* [Get Beneficiaries](beneficiaries/get-beneficiaries.md)
+* [Add Beneficiary](beneficiaries/add-beneficiary.md)

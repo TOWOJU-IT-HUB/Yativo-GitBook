@@ -17,7 +17,7 @@ The request body should contain the following parameters:
 * **customer\_id (required):** The unique identifier of the customer for whom the virtual account is being created. This identifier should be in UUID format.
 * **document\_id (required):** The document ID of the customer. This can be a unique identifier assigned to the customer's official document.
 * **document\_type (required):** The type of document provided. Accepted document types are "CUIT" (Clave Única de Identificación Tributaria), "CUIL" (Clave Única de Identificación Laboral), or "CDI" (Cédula de Identidad).
-* **currency (required):** The currency in which the account will operate. By default, it is set to "ARS" (Argentine Peso).
+* **currency (required):** The currency in which the account will operate. By default, it should be set to "ARS" (Argentine Peso).
 
 **Example Request**
 
@@ -68,6 +68,6 @@ In case of errors, the response will include an appropriate status code and an e
 **Additional Notes**
 
 * Ensure that the provided document ID and type are accurate and valid.
-* The currency parameter is optional and defaults to "ARS" if not specified.
+* The currency parameter is required (ARS).
 
 This documentation should guide developers on how to effectively utilize the Create Argentina Virtual Account endpoint to create virtual accounts for customers in Argentina.
