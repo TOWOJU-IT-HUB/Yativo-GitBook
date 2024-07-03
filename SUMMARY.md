@@ -4,6 +4,8 @@
 * [Introduction to Yativo](introduction-to-yativo/README.md)
   * [Financial Infrastructure](introduction-to-yativo/financial-infrastructure.md)
   * [About Us](introduction-to-yativo/about-us.md)
+* [Yativo API Glossary](yativo-api-glossary.md)
+* [Getting Started with Yativo API](getting-started-with-yativo-api.md)
 * [Authentication](authentication.md)
 * [Customer](customer/README.md)
   * [Get Customers](customer/get-customers.md)

@@ -4,8 +4,6 @@
 
 Before a customer can create a virtual card, they must be registered and activated for this service. This registration involves providing specific information and completing an activation request through the endpoint `{{baseUrl}}/customer/virtual/cards/activate`. Below are the necessary details and steps for this process.
 
-
-
 We support all countries and have different IDType for certain countries; here is the list;
 
 | Countries       | Accepted Documents                              |
@@ -39,7 +37,7 @@ To register a customer for virtual card creation, the following information is n
 #### Activation Request Process
 
 1. **Collect Customer Information**: Gather all the required information listed above from the customer.
-2. **Send Activation Request**: Make a POST request to the endpoint `api/v1/customer/virtual/cards/activate` with the collected information in the request payload.
+2. **Send Activation Request**: Make a `POST` request to the endpoint `api/v1/customer/virtual/cards/activate` with the collected information in the request payload.
 
 #### Example Request Payload
 
@@ -65,6 +63,143 @@ Here is an example of how the request payload should be structured:
 }
 
 ```
+
+{% tabs %}
+{% tab title="Python" %}
+{% code lineNumbers="true" %}
+```python
+import requests
+import json
+
+url = '{{baseUrl}}/customer/virtual/cards/activate'
+payload = {
+    'customerId': '123456789',
+    'customerEmail': 'customer@example.com',
+    'idNumber': 'A12345678',
+    'idType': 'passport',
+    'firstName': 'John',
+    'lastName': 'Doe',
+    'dateOfBirth': 'YYYY-MM-DD',
+    'phoneNumber': '+1234567890',
+    'city': 'New York',
+    'state': 'NY',
+    'country': 'USA',
+    'zipCode': '10001',
+    'line1': '123 Main St',
+    'houseNumber': '456',
+    'idImage': 'https://example.com/id_image.jpg'
+}
+headers = {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+}
+
+response = requests.post(url, headers=headers, data=json.dumps(payload))
+
+print(response.json())
+
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="JavaScript" %}
+{% code lineNumbers="true" %}
+```javascript
+const url = '{{baseUrl}}/customer/virtual/cards/activate';
+const payload = JSON.stringify({
+  customerId: '123456789',
+  customerEmail: 'customer@example.com',
+  idNumber: 'A12345678',
+  idType: 'passport',
+  firstName: 'John',
+  lastName: 'Doe',
+  dateOfBirth: 'YYYY-MM-DD',
+  phoneNumber: '+1234567890',
+  city: 'New York',
+  state: 'NY',
+  country: 'USA',
+  zipCode: '10001',
+  line1: '123 Main St',
+  houseNumber: '456',
+  idImage: 'https://example.com/id_image.jpg'
+});
+
+const options = {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+  },
+  body: payload
+};
+
+fetch(url, options)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="PHP" %}
+{% code lineNumbers="true" %}
+```php
+<?php
+$url = '{{baseUrl}}/customer/virtual/cards/activate';
+$payload = json_encode(array(
+    'customerId' => '123456789',
+    'customerEmail' => 'customer@example.com',
+    'idNumber' => 'A12345678',
+    'idType' => 'passport',
+    'firstName' => 'John',
+    'lastName' => 'Doe',
+    'dateOfBirth' => 'YYYY-MM-DD',
+    'phoneNumber' => '+1234567890',
+    'city' => 'New York',
+    'state' => 'NY',
+    'country' => 'USA',
+    'zipCode' => '10001',
+    'line1' => '123 Main St',
+    'houseNumber' => '456',
+    'idImage' => 'https://example.com/id_image.jpg'
+));
+
+$headers = array(
+    'Content-Type: application/json',
+    'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+);
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+    CURLOPT_URL => $url,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'POST',
+    CURLOPT_POSTFIELDS => $payload,
+    CURLOPT_HTTPHEADER => $headers,
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+?>
+
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 #### Example Response
 

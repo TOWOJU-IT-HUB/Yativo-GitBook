@@ -1,7 +1,5 @@
 # Get Customers
 
-
-
 <mark style="color:green;">`GET`</mark> `/customer`
 
 #### Get Customers Endpoint - Yativo
@@ -30,7 +28,7 @@ The "Get Customers" endpoint is a crucial part of our API, designed to retrieve 
 **Request sample and Response**
 
 {% tabs %}
-{% tab title="Request" %}
+{% tab title="Python" %}
 ```python
 import requests
 
@@ -48,11 +46,53 @@ print(response.text)
 ```
 {% endtab %}
 
+{% tab title="JavaScript" %}
+```javascript
+const url = '{{baseUrl}}/customer';
+const options = {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+  }
+};
+
+fetch(url, options)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+<?php
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => '{{baseUrl}}/customer',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_HTTPHEADER => array(
+    'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+  ),
+));
+
+$response = curl_exec($curl);
+curl_close($curl);
+
+echo $response;
+?>
+
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+{% tabs %}
 {% tab title="200" %}
-{% code title="success response" lineNumbers="true" fullWidth="true" %}
-```json
-{
-    "status": "success",
+<pre class="language-json" data-title="Success response" data-line-numbers><code class="lang-json"><strong>{
+</strong>    "status": "success",
     "status_code": 200,
     "message": "Records retrieved successfully",
     "data": [
@@ -96,13 +136,12 @@ print(response.text)
         "prev_page_url": null
     }
 }
-```
-{% endcode %}
+</code></pre>
 {% endtab %}
 
 {% tab title="400" %}
 ```json
-    "status_code": 400,
+{   "status_code": 400,
     "message": "Request failed",
     "data": {
         "error": "Oops. Error message"

@@ -1,16 +1,12 @@
 # Update customer data
 
+#### Update Customer Endpoint - Yativo
 
-
-<mark style="color:green;">`PUT`</mark> `/customer/{{customer_id}}`
-
-#### Get Customers Endpoint - Yativo
-
-The "Get Customers" endpoint is a crucial part of our API, designed to retrieve detailed information about customers stored in the system. This endpoint provides an efficient way for applications to access customer data for various purposes, including displaying customer profiles, analyzing customer demographics, or integrating with other systems.
+The <mark style="color:green;">`PUT`</mark> `/customer/{{customer_id}}` endpoint provides an efficient way for applications to update the details of an existing customer in the Yativo system. This endpoint is used when you need to modify specific information associated with a customer.
 
 **Key Features:**
 
-1. **HTTP Method**: PU`T`
+1. **HTTP Method**: `PUT`
 2. **Endpoint URL**: `/customer/{{customer_id}}`
 3. **Authentication**: Requires Bearer token to ensure secure access.
 
@@ -27,9 +23,11 @@ The "Get Customers" endpoint is a crucial part of our API, designed to retrieve 
 
 **Request sample and Response**
 
+
+
 {% tabs %}
-{% tab title="Request" %}
-```python
+{% tab title="Python" %}
+```
 import requests
 
 url = "{{baseUrl}}/customer"
@@ -42,10 +40,64 @@ headers = {
 response = requests.request("GET", url, headers=headers, data=payload)
 
 print(response.text)
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```
+const url = '{{baseUrl}}/customer';
+const headers = {
+  'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+};
+
+fetch(url, {
+  method: 'GET',
+  headers: headers
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
 
 ```
 {% endtab %}
 
+{% tab title="PHP" %}
+```
+<?php
+$url = '{{baseUrl}}/customer';
+$headers = array(
+    'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+);
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+    CURLOPT_URL => $url,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_HTTPHEADER => $headers
+));
+
+$response = curl_exec($curl);
+
+if (curl_errno($curl)) {
+    echo 'Error:' . curl_error($curl);
+} else {
+    echo $response;
+}
+
+curl_close($curl);
+?>
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
 {% tab title="200" %}
 {% code title="success response" lineNumbers="true" fullWidth="true" %}
 ```json

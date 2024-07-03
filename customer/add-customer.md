@@ -6,15 +6,15 @@ description: >-
 
 # Add Customer
 
-The "Add Customer" endpoint is a vital component of our API, designed to facilitate the creation and storage of new customer records within the system. This endpoint allows applications to efficiently add customer data, ensuring that new customer information is accurately recorded for subsequent use. It supports various use cases, including registering new users, onboarding clients, and integrating customer data from other systems.
+The <mark style="color:green;">`POST`</mark> `{{baseUrl}}/customer`  endpoint is designed to facilitate the creation and storage of new customer records within the system. This endpoint allows applications to efficiently add customer data, ensuring that new customer information is accurately recorded for subsequent use. It supports various use cases, including registering new users, onboarding clients, and integrating customer data from other systems.
 
 **Key Features:**
 
 * **HTTP Method**: `POST`
-* **Endpoint URL**: \{{baseUrl\}}`/customers`
-* **Authentication**: Requires Bearer  token to ensure secure access.
+* **Endpoint URL**: \{{baseUrl\}}`/customer`
+* **Authentication**: Requires Bearer token to ensure secure access.
 * **Request Payload**: Accepts a JSON object containing detailed customer information, such as name, email, phone number, address, and identification details.
-* <mark style="background-color:orange;">**Note the customer ID info will not be available after this request.**</mark>
+* <mark style="background-color:orange;">**Note the customer Identity Document information will not be available after this request.**</mark>
 
 ## Create a new user
 
@@ -47,7 +47,7 @@ The "Add Customer" endpoint is a vital component of our API, designed to facilit
     },
     "customer_idType": "PASSPORT",
     "customer_idNumber": "A10600011",
-    "customer_idCountry": "Nigeria",
+    "customer_idCountry": "Chile",
     "customer_idExpiration": "04/24",
     "customer_idFront": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=", // base64_encode image
     "customer_idBack": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=" // base64_encode image
@@ -77,7 +77,7 @@ payload = json.dumps({
   },
   "customer_idType": "PASSPORT",
   "customer_idNumber": "A10600011",
-  "customer_idCountry": "Nigeria",
+  "customer_idCountry": "Chile",
   "customer_idExpiration": "04/24",
   "customer_idFront": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=",
   "customer_idBack": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII="
@@ -121,7 +121,7 @@ request.body = JSON.dump({
   },
   "customer_idType": "PASSPORT",
   "customer_idNumber": "A10600011",
-  "customer_idCountry": "Nigeria",
+  "customer_idCountry": "Chile",
   "customer_idExpiration": "04/24",
   "customer_idFront": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=",
   "customer_idBack": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII="
@@ -151,7 +151,7 @@ let data = JSON.stringify({
   },
   "customer_idType": "PASSPORT",
   "customer_idNumber": "A10600011",
-  "customer_idCountry": "Nigeria",
+  "customer_idCountry": "Chile",
   "customer_idExpiration": "04/24",
   "customer_idFront": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=",
   "customer_idBack": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII="
@@ -201,7 +201,7 @@ $body = '{
   },
   "customer_idType": "PASSPORT",
   "customer_idNumber": "A10600011",
-  "customer_idCountry": "Nigeria",
+  "customer_idCountry": "Chile",
   "customer_idExpiration": "04/24",
   "customer_idFront": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=",
   "customer_idBack": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII="
@@ -209,6 +209,53 @@ $body = '{
 $request = new Request('POST', '{{baseUrl}}/customer', $headers, $body);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();
+
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const url = '{{baseUrl}}/customer';
+
+const payload = JSON.stringify({
+  customer_name: 'Test Customer',
+  customer_email: 'test_customer@yativo.com',
+  customer_phone: '+19203751411',
+  customer_country: 'USA',
+  customer_address: {
+    city: 'Anytown',
+    state: 'Anystate',
+    zipcode: '12345',
+    street: '1234 Elm Street',
+    number: '5678',
+    country: 'USA'
+  },
+  customer_idType: 'PASSPORT',
+  customer_idNumber: 'A10600011',
+  customer_idCountry: 'Chile',
+  customer_idExpiration: '04/24',
+  customer_idFront: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=',
+  customer_idBack: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII='
+});
+
+const options = {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+  },
+  body: payload
+};
+
+fetch(url, options)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(data => console.log('Customer created:', data))
+  .catch(error => console.error('Error:', error));
 
 ```
 {% endtab %}
