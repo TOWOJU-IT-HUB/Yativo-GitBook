@@ -294,7 +294,7 @@ request(options, function (error, response) {
         "first_page_url": "https://api.yativo.com/api/v1/beneficiaries?page=1",
         "from": 1,
         "last_page": 1,
-        "last_page_url": "https://zee.test/api/v1/beneficiaries?page=1",
+        "last_page_url": "https://api.yativo.com/api/v1/beneficiaries?page=1",
         "links": [
             {
                 "url": null,
