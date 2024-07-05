@@ -28,13 +28,21 @@
   * [Batch Payout](payout/batch-payout.md)
   * [Get Payouts](payout/get-payouts.md)
   * [Get Payout](payout/get-payout.md)
+
+## Beneficiaries
+
+* [Add Beneficiary](beneficiaries/add-beneficiary.md)
+* [Get Beneficiaries](beneficiaries/get-beneficiaries.md)
+* [Update Beneficiary](beneficiaries/update-beneficiary.md)
+* [Add Beneficiary Payment Details](beneficiaries/add-beneficiary-payment-details.md)
+
+***
+
+* [Currencies](currencies.md)
+* [Exchange Rate](exchange-rate/README.md)
+  * [Request Quote](exchange-rate/request-quote.md)
 * [API reference](api-reference/README.md)
   * [Misc.](api-reference/misc./README.md)
     * [Countries](api-reference/misc./countries.md)
     * [States](api-reference/misc./states.md)
     * [City](api-reference/misc./city.md)
-
-## Beneficiaries
-
-* [Get Beneficiaries](beneficiaries/get-beneficiaries.md)
-* [Add Beneficiary](beneficiaries/add-beneficiary.md)

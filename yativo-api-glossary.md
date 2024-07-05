@@ -57,6 +57,43 @@ A unique identifier for your business account within the Yativo system. It is us
 
 A confidential key associated with your API keys that helps authenticate and authorize your API requests. It should be kept secure and not shared publicly.
 
+**FBO (For Benefit Of) Virtual Accounts:**
+
+These accounts are utilized by Yativo Businesses to manage and store funds separately, often for specific purposes such as transactions, payments, or escrow services.
+
+**End-user Virtual Accounts**
+
+End-user Virtual Accounts are sub-wallets provided to Yativo Business Customers under their name within the Yativo platform, These accounts enable Yativo Business Customers to manage funds distinctively for their own transactions, payments, or other financial activities facilitated through the Yativo API.
+
+**Beneficiary**
+
+* **Definition:** A beneficiary within the Yativo API context is an individual or entity designated to receive payments or transfers initiated by a Yativo Business Customer.
+* **Explanation:** This designation ensures that funds or payments processed through Yativo are directed to the intended recipient, whether an individual or an organization.
+
+**End-user Beneficiary**
+
+End-user Virtual Accounts are beneficiaries of end-user accounts.
+
+**Payment Details**
+
+Payment Details encompass specific information related to a financial transaction or payment process within the Yativo API. These details typically include data such as account numbers, routing information, beneficiary details, and any other pertinent information required to complete a payment or transfer, these details vary by the payment method and gateway.
+
+**Dynamic Form**
+
+A Dynamic Form within the Yativo API is a form that has it's form fields populated by the response body of an endpoint.
+
+**Exchange Rate**
+
+Exchange Rate refers to the rate at which one currency can be exchanged for another currency, exchange rates are used to calculate the equivalent value of one currency in terms of another, facilitating currency conversions for transactions or financial operations.
+
+
+
+
+
+
+
+
+
 ***
 
 By familiarizing yourself with these terms, you’ll have a better understanding of how to effectively use the Yativo API and its features. For more detailed explanations and examples, refer to the relevant sections in the Yativo API Documentation. If you have any questions or need further assistance, please contact our [Support Center](https://www.yativo.com/support).

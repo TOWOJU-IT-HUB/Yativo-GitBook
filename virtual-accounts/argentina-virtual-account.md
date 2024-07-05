@@ -4,7 +4,7 @@
 
 **Overview**
 
-The Create ARVirtual Account endpoint allows you to create a virtual account for a customer in Argentina. This account facilitates transactions and financial activities within the country. To create an ARVirtual account, you need to provide specific information about the customer and their documentation.
+The Create ARVirtual Account endpoint allows you to create a virtual account for a customer in Argentina. This account facilitates transactions and financial activities within the country. To create an ARVirtual account, you need to provide specific information about the customer and their documentation and the customer must be an Argentinean resident.
 
 **Endpoint**
 
@@ -32,6 +32,118 @@ Content-Type: application/json
     "currency": "ARS"
 }
 ```
+
+{% tabs %}
+{% tab title="PHP" %}
+```
+$url = "{{baseUrl}}/customer/virtual-accounts/create";
+$data = array(
+    "customer_id" => "123e4567-e89b-12d3-a456-426614174000",
+    "document_id" => "A23E4567",
+    "document_type" => "CUIT",
+    "currency" => "ARS"
+);
+$data_json = json_encode($data);
+
+$headers = array(
+    'Content-Type: application/json',
+    'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+);
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+    CURLOPT_URL => $url,
+    CURLOPT_POST => true,
+    CURLOPT_POSTFIELDS => $data_json,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_HTTPHEADER => $headers
+));
+
+$response = curl_exec($curl);
+
+if (curl_errno($curl)) {
+    echo 'Error:' . curl_error($curl);
+} else {
+    echo $response;
+}
+
+curl_close($curl);
+
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```
+import requests
+import json
+
+url = "{{baseUrl}}/customer/virtual-accounts/create"
+data = {
+    "customer_id": "123e4567-e89b-12d3-a456-426614174000",
+    "document_id": "A23E4567",
+    "document_type": "CUIT",
+    "currency": "ARS"
+}
+headers = {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+}
+
+response = requests.post(url, headers=headers, data=json.dumps(data))
+
+print(response.text)
+
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```
+const url = "{{baseUrl}}/customer/virtual-accounts/create";
+const data = {
+    "customer_id": "123e4567-e89b-12d3-a456-426614174000",
+    "document_id": "A23E4567",
+    "document_type": "CUIT",
+    "currency": "ARS"
+};
+
+const options = {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+  },
+  body: JSON.stringify(data)
+};
+
+fetch(url, options)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+
+```
+{% endtab %}
+
+{% tab title="cURL" %}
+```
+curl -X POST {{baseUrl}}/customer/virtual-accounts/create \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9" \
+-d '{
+    "customer_id": "123e4567-e89b-12d3-a456-426614174000",
+    "document_id": "A23E4567",
+    "document_type": "CUIT",
+    "currency": "ARS"
+}'
+
+```
+{% endtab %}
+{% endtabs %}
 
 **Response**
 
