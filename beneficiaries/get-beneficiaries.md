@@ -88,22 +88,22 @@ request(options, function (error, response) {
       {
         "id": 1,
         "user_id": 2,
-        "nickname": "John Doe Zenith bank",
+        "nickname": "John Doe Banco de Chile",
         "mode": "unknown",
-        "currency": "NGN",
+        "currency": "CLP",
         "address": {
-          "city": "Lugbe",
-          "state": "FCT - Abuja",
-          "country": "Nigeria",
-          "postal_code": "900709"
+          "city": "Santiago",
+          "state": "Región Metropolitana",
+          "country": "Chile",
+          "postal_code": "8320000"
         },
         "beneficiary": {
           "name": "Yativo Smith",
           "email": "john@yativo.com"
         },
         "payment_object": {
-          "bank_name": "Access bank",
-          "bank_code": "044",
+          "bank_name": "Banco de Chile",
+          "bank_code": "001",
           "account_number": "0719841763",
           "account_name": "Yativo Smith"
         },
@@ -118,10 +118,10 @@ request(options, function (error, response) {
         "mode": "monnet",
         "currency": "CLP",
         "address": {
-          "city": "Lugbe",
-          "state": "FCT - Abuja",
-          "country": "Nigeria",
-          "postal_code": "900709"
+          "city": "Santiago",
+          "state": "Región Metropolitana",
+          "country": "Chile",
+          "postal_code": "8320000"
         },
         "beneficiary": {
           "name": "Miguel Perez",
@@ -172,5 +172,4 @@ request(options, function (error, response) {
     "total": 7
   }
 }
-
 ```
