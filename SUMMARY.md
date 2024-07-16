@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Yativo](README.md)
+* [English / Español](README.md)
+* [Yativo](<README (1).md>)
 * [Introduction to Yativo](introduction-to-yativo/README.md)
   * [Financial Infrastructure](introduction-to-yativo/financial-infrastructure.md)
   * [About Us](introduction-to-yativo/about-us.md)
