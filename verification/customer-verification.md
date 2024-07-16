@@ -24,28 +24,31 @@ Authorization: Bearer YOUR_API_KEY
 
 **Request Parameters:**
 
-| Parameter       | Type   | Required | Description                                |
-| --------------- | ------ | -------- | ------------------------------------------ |
-| `first_name`    | string | Yes      | The customer's first name.                 |
-| `last_name`     | string | Yes      | The customer's last name.                  |
-| `middle_name`   | string | No       | The customer's middle name.                |
-| `email`         | string | No       | The customer's email address.              |
-| `phone`         | string | No       | The customer's phone number.               |
-| `date_of_birth` | string | Yes      | The customer's date of birth (YYYY-MM-DD). |
-| `ip_address`    | string | No       | The customer's IP address.                 |
+<table><thead><tr><th width="189">Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>first_name</code></td><td>string</td><td>Yes</td><td>The customer's first name.</td></tr><tr><td><code>last_name</code></td><td>string</td><td>Yes</td><td>The customer's last name.</td></tr><tr><td><code>middle_name</code></td><td>string</td><td>No</td><td>The customer's middle name.</td></tr><tr><td><code>email</code></td><td>string</td><td>No</td><td>The customer's email address.</td></tr><tr><td><code>phone</code></td><td>string</td><td>No</td><td>The customer's phone number.</td></tr><tr><td><code>date_of_birth</code></td><td>string</td><td>Yes</td><td>The customer's date of birth (YYYY-MM-DD).</td></tr><tr><td><code>ip_address</code></td><td>string</td><td>No</td><td>The customer's IP address.</td></tr></tbody></table>
 
-```
+```json
 //Example request
 {
     "first_name": "John",
+    "customer_id": "CUST_123456",
     "last_name": "Doe",
-    "middle_name": "A",
+    "middle_name": "Smith",
     "email": "john.doe@example.com",
     "phone": "+1234567890",
-    "date_of_birth": "1990-01-01",
-    "ip_address": "192.168.1.1"
+    "dob": "1980-01-01",
+    "gender": "Male",
+    "mobile": "+1234567890",
+    "street": "123 Main Street",
+    "landmark": "Near City Park",
+    "lga": "Central Business District",
+    "state": "California",
+    "date_of_birth": "1980-01-01",
+    "ip_address": "192.168.1.1",
+    "selfieimage": "base64_encoded_image_data",
+    "photoidimage": "base64_encoded_image_data",
+    "imageFrontSide": "base64_encoded_image_data",
+    "imageBackSide": "base64_encoded_image_data"
 }
-
 ```
 
 #### 4. Error Codes
