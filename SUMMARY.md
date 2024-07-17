@@ -58,4 +58,4 @@
 
 ## Español <a href="#es" id="es"></a>
 
-* [Page 1](es/page-1.md)
+* [Yativo](es/yativo.md)
