@@ -16,7 +16,6 @@
   * [Delete Customer](customer/delete-customer.md)
   * [Verification](customer/verification/README.md)
     * [Customer Verification](customer/verification/customer-verification.md)
-    * [Selfie Verification](customer/verification/selfie-verification.md)
     * [Global Business Search](customer/verification/global-business-search.md)
 * [Virtual Cards](virtual-cards/README.md)
   * [Supported Currency, Country](virtual-cards/supported-currency-country.md)
