@@ -55,3 +55,7 @@
     * [Countries](api-reference/misc./countries.md)
     * [States](api-reference/misc./states.md)
     * [City](api-reference/misc./city.md)
+
+## Español <a href="#es" id="es"></a>
+
+* [Page 1](es/page-1.md)
