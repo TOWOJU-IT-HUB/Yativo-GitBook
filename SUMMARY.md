@@ -58,4 +58,5 @@
 
 ## Español <a href="#es" id="es"></a>
 
-* [Yativo](es/yativo.md)
+* [Yativo](es/page-1.md)
+* [Introducción a Yativo](es/introduccion-a-yativo.md)
