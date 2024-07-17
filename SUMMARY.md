@@ -38,17 +38,12 @@
   * [Batch Payout](payout/batch-payout.md)
   * [Get Payouts](payout/get-payouts.md)
   * [Get Payout](payout/get-payout.md)
-
-## Beneficiaries
-
-* [Add Beneficiary](beneficiaries/add-beneficiary.md)
-* [Get Beneficiaries](beneficiaries/get-beneficiaries.md)
-* [Update Beneficiary](beneficiaries/update-beneficiary.md)
-* [Add Beneficiary Payment Details](beneficiaries/add-beneficiary-payment-details.md)
-* [Archive Beneficiary](beneficiaries/archive-beneficiary.md)
-
-***
-
+* [Beneficiaries](beneficiaries/README.md)
+  * [Get Beneficiaries](beneficiaries/get-beneficiaries.md)
+  * [Add Beneficiary Payment Details](beneficiaries/add-beneficiary-payment-details.md)
+  * [Update Beneficiary](beneficiaries/update-beneficiary.md)
+  * [Archive Beneficiary](beneficiaries/archive-beneficiary.md)
+  * [Add Beneficiary](beneficiaries/add-beneficiary.md)
 * [Supported Jurisdiction](supported-jurisdiction.md)
 * [Supported Countries, Currencies and Payment Method](supported-countries-currencies-and-payment-method.md)
 * [Currencies](currencies.md)
