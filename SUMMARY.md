@@ -53,8 +53,3 @@
     * [Countries](api-reference/misc./countries.md)
     * [States](api-reference/misc./states.md)
     * [City](api-reference/misc./city.md)
-
-## Español <a href="#es" id="es"></a>
-
-* [Yativo](es/page-1.md)
-* [Introducción a Yativo](es/introduccion-a-yativo.md)
