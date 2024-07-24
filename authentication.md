@@ -72,3 +72,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vM
 ```
 
 By following these steps, you can authenticate with the Yativo API and securely access its protected resources using the provided bearer token.
+
+
+
+{% embed url="https://replit.com/@sotonye1/yativo?lite=true" %}
