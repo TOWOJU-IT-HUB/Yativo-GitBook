@@ -75,4 +75,4 @@ By following these steps, you can authenticate with the Yativo API and securely 
 
 
 
-{% embed url="https://replit.com/@sotonye1/yativo?lite=true" %}
+{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/vYqyLKM" %}
