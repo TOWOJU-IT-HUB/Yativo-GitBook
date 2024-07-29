@@ -70,3 +70,7 @@ The API uses standard HTTP status codes to indicate the success or failure of an
 * **Validate Input:** Ensure all required fields are provided and valid before making API requests.
 * **Handle Errors Gracefully:** Implement error handling in your application to manage different HTTP status codes and error responses.
 * **Rate Limiting:** Be mindful of the API rate limits and avoid making excessive requests in a short period.
+
+
+
+{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/zYVNrxz" %}
