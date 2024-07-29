@@ -135,3 +135,7 @@ fetch(url, {
 ```
 {% endtab %}
 {% endtabs %}
+
+
+
+{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/GRbrora" %}
