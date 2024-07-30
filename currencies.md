@@ -27,7 +27,7 @@ No request body is required for this endpoint.
 ```python
 import requests
 
-url = "https://api.yourservice.com/currencies/all"
+url = "{{baseUrl}}/currencies/all"
 headers = {
     "Authorization": "Bearer YOUR_ACCESS_TOKEN"
 }
@@ -42,7 +42,7 @@ print(response.json())
 ```php
 <?php
 
-$url = "https://api.yourservice.com/currencies/all";
+$url = "{{baseUrl}}/currencies/all";
 $headers = array(
     "Authorization: Bearer YOUR_ACCESS_TOKEN"
 );
@@ -71,7 +71,7 @@ curl_close($curl);
 
 {% tab title="JavaScript" %}
 ```javascript
-const url = "https://api.yourservice.com/currencies/all";
+const url = "{{baseUrl}}/currencies/all";
 
 const options = {
   method: 'GET',
@@ -95,7 +95,7 @@ fetch(url, options)
 
 {% tab title="cURL" %}
 ```xml
-curl -X GET "https://api.yourservice.com/currencies/all" \
+curl -X GET "{{baseUrl}}/currencies/all" \
      -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
 
 ```
