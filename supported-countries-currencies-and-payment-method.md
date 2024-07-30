@@ -38,3 +38,6 @@ Find a list of supported Currency, Country and Payment Method pairing
 | jpy        | Japan                                                                                                                                                                                                                                                                                                                                                        |
 | sgd        | Singapore                                                                                                                                                                                                                                                                                                                                                    |
 
+
+
+{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/Bagprxq" %}
