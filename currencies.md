@@ -266,3 +266,7 @@ curl -X GET "{{baseUrl}}/currencies/all" \
   ]
 }
 ```
+
+
+
+{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/jOjyzXg" %}
