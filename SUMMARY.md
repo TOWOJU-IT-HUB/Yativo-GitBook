@@ -45,6 +45,8 @@
 * [Supported Jurisdiction](supported-jurisdiction.md)
 * [Supported Countries, Currencies and Payment Method](supported-countries-currencies-and-payment-method.md)
 * [Currencies](currencies.md)
+* [Crypto Wallets](crypto-wallets/README.md)
+  * [Get Wallet](crypto-wallets/get-wallet.md)
 * [Exchange Rate](exchange-rate/README.md)
   * [Request Quote](exchange-rate/request-quote.md)
 * [Business Plans](business-plans.md)
