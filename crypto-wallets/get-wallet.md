@@ -16,8 +16,6 @@
 
 Example Request&#x20;
 
-
-
 {% tabs %}
 {% tab title="PHP" %}
 ```php
