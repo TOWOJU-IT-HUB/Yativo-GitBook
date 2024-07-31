@@ -2,9 +2,7 @@
 
 ## Create virtual account
 
-<mark style="color:green;">`POST`</mark> `{{baseUrl}}/customer/virtual-accounts/create`
-
-This endpoint allows you to create a virtual account that can be used to receive funds.
+<mark style="color:green;">`POST`</mark> `{{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}`This endpoint allows you to create a virtual account that can be used to receive funds.
 
 **Headers**
 
@@ -51,3 +49,166 @@ This endpoint allows you to create a virtual account that can be used to receive
 ```
 {% endtab %}
 {% endtabs %}
+
+**Request Example**
+
+
+
+{% tabs %}
+{% tab title="PHP" %}
+```php
+<?php
+$baseUrl = 'https://sandbox.yativo.com'; // Replace with the actual base URL
+$accessToken = 'YOUR_ACCESS_TOKEN';
+$customerId = 'YOUR_CUSTOMER_ID';
+
+$url = $baseUrl . '/example-endpoint';
+
+$data = [
+    'customer_id' => $customerId,
+    'beneficiary' => [
+        'document' => [
+            'id' => 'A10909999',
+            'type' => 'PASSPORT'
+        ],
+        'name' => 'xoxo',
+        'lastname' => 'xoxo',
+        'type' => 'xoxo'
+    ],
+    'address' => [
+        'city' => 'xoxo',
+        'state' => 'xoxo',
+        'zipcode' => 'xoxo',
+        'street' => 'xoxo',
+        'number' => 'xoxo',
+        'country' => 'xoxo'
+    ],
+    'currency' => 'MXN',
+    'country' => 'MEX'
+];
+
+$options = [
+    'http' => [
+        'header'  => "Authorization: Bearer $accessToken\r\n" .
+                     "Content-Type: application/json\r\n",
+        'method'  => 'POST',
+        'content' => json_encode($data)
+    ]
+];
+
+$context  = stream_context_create($options);
+$response = file_get_contents($url, false, $context);
+
+if ($response === FALSE) {
+    die('Error occurred');
+}
+
+$responseData = json_decode($response, true);
+print_r($responseData);
+?>
+
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+baseUrl = 'https://sandbox.yativo.com'  # Replace with the actual base URL
+accessToken = 'YOUR_ACCESS_TOKEN'
+customerId = 'YOUR_CUSTOMER_ID'
+url = f'{baseUrl}/example-endpoint'
+
+data = {
+    'customer_id': customerId,
+    'beneficiary': {
+        'document': {
+            'id': 'A10909999',
+            'type': 'PASSPORT'
+        },
+        'name': 'xoxo',
+        'lastname': 'xoxo',
+        'type': 'xoxo'
+    },
+    'address': {
+        'city': 'xoxo',
+        'state': 'xoxo',
+        'zipcode': 'xoxo',
+        'street': 'xoxo',
+        'number': 'xoxo',
+        'country': 'xoxo'
+    },
+    'currency': 'MXN',
+    'country': 'MEX'
+}
+
+headers = {
+    'Authorization': f'Bearer {accessToken}',
+    'Content-Type': 'application/json'
+}
+
+response = requests.post(url, json=data, headers=headers)
+
+if response.status_code != 200:
+    print(f'Error: {response.status_code} - {response.text}')
+else:
+    responseData = response.json()
+    print('Response:', responseData)
+
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const baseUrl = 'https://sandbox.yativo.com'; // Replace with the actual base URL
+const accessToken = 'YOUR_ACCESS_TOKEN';
+const customerId = 'YOUR_CUSTOMER_ID';
+const url = `${baseUrl}/example-endpoint`;
+
+const data = {
+  customer_id: customerId,
+  beneficiary: {
+    document: {
+      id: 'A10909999',
+      type: 'PASSPORT'
+    },
+    name: 'xoxo',
+    lastname: 'xoxo',
+    type: 'xoxo'
+  },
+  address: {
+    city: 'xoxo',
+    state: 'xoxo',
+    zipcode: 'xoxo',
+    street: 'xoxo',
+    number: 'xoxo',
+    country: 'xoxo'
+  },
+  currency: 'MXN',
+  country: 'MEX'
+};
+
+const options = {
+  method: 'POST',
+  headers: {
+    'Authorization': `Bearer ${accessToken}`,
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+};
+
+fetch(url, options)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Network response was not ok ${response.statusText}`);
+    }
+    return response.json();
+  })
+  .then(data => console.log('Response:', data))
+  .catch(error => console.error('Error:', error));
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/ZEdeEqY" %}
