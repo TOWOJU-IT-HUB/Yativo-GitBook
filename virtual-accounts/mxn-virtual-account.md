@@ -8,7 +8,7 @@ This document provides guidelines for creating a virtual account for Mexican res
 
 **Endpoint**
 
-`POST {{baseUrl}}/customer/virtual-accounts/create`
+`POST {{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}`
 
 **Request Body**
 
