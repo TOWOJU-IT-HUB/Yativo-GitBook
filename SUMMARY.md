@@ -47,6 +47,7 @@
 * [Currencies](currencies.md)
 * [Crypto Wallets](crypto-wallets/README.md)
   * [Get Wallet](crypto-wallets/get-wallet.md)
+  * [Get Wallet Address](crypto-wallets/get-wallet-address.md)
 * [Exchange Rate](exchange-rate/README.md)
   * [Request Quote](exchange-rate/request-quote.md)
 * [Business Plans](business-plans.md)
