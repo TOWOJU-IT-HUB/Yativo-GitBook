@@ -8,7 +8,7 @@ The Create ARVirtual Account endpoint allows you to create a virtual account for
 
 **Endpoint**
 
-`POST {{baseUrl}}/customer/virtual-accounts/create`
+`POST {{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}`
 
 **Request Body**
 
@@ -22,7 +22,7 @@ The request body should contain the following parameters:
 **Example Request**
 
 ```http
-POST {{baseUrl}}/customer/virtual-accounts/create
+POST {{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}
 Content-Type: application/json
 
 {
@@ -36,7 +36,7 @@ Content-Type: application/json
 {% tabs %}
 {% tab title="PHP" %}
 ```
-$url = "{{baseUrl}}/customer/virtual-accounts/create";
+$url = "{{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}";
 $data = array(
     "customer_id" => "123e4567-e89b-12d3-a456-426614174000",
     "document_id" => "A23E4567",
@@ -78,7 +78,7 @@ curl_close($curl);
 import requests
 import json
 
-url = "{{baseUrl}}/customer/virtual-accounts/create"
+url = "{{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}"
 data = {
     "customer_id": "123e4567-e89b-12d3-a456-426614174000",
     "document_id": "A23E4567",
@@ -99,7 +99,7 @@ print(response.text)
 
 {% tab title="JavaScript" %}
 ```
-const url = "{{baseUrl}}/customer/virtual-accounts/create";
+const url = "{{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}";
 const data = {
     "customer_id": "123e4567-e89b-12d3-a456-426614174000",
     "document_id": "A23E4567",
@@ -131,7 +131,7 @@ fetch(url, options)
 
 {% tab title="cURL" %}
 ```
-curl -X POST {{baseUrl}}/customer/virtual-accounts/create \
+curl -X POST {{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}\
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9" \
 -d '{
