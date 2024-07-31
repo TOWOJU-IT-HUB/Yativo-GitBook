@@ -1,14 +1,14 @@
 # Virtual Account Management
 
-### Archive Virtual Account
+### Delete Virtual Account
 
 #### Endpoint
 
-**POST** \{{baseUrl\}}`/virtual-accounts/{account_id}/archive`
+**POST** `{{baseUrl}}/business/virtual-account/delete-virtual-account/{{customerID}}`
 
 #### Description
 
-This endpoint allows you to archive a virtual account, effectively marking it as inactive and preventing any further transactions.
+This endpoint allows you to delete a virtual account, effectively marking it as inactive and preventing any further transactions.
 
 #### Request
 
@@ -19,14 +19,14 @@ This endpoint allows you to archive a virtual account, effectively marking it as
 
 **Path Parameters**
 
-| Parameter    | Type   | Required | Description                              |
-| ------------ | ------ | -------- | ---------------------------------------- |
-| `account_id` | string | Yes      | Unique identifier of the virtual account |
+| Parameter     | Type   | Required | Description                              |
+| ------------- | ------ | -------- | ---------------------------------------- |
+| customer`_id` | string | Yes      | Unique identifier of the virtual account |
 
 **Example Request**
 
 ```xml
-POST {{baseUrl}}/virtual-accounts/va_1234567890abcdef/archive
+POST {{baseUrl}}/business/virtual-account/delete-virtual-account/{{customerID}}
 Authorization: Bearer your_api_token
 Content-Type: application/json
 ```
@@ -35,24 +35,23 @@ Content-Type: application/json
 
 **Success (200)**
 
-| Field        | Type   | Description                            |
-| ------------ | ------ | -------------------------------------- |
-| `message`    | string | Success message                        |
-| `account_id` | string | Unique identifier of the account       |
-| `status`     | string | New status of the account ("archived") |
+| Field         | Type   | Description                            |
+| ------------- | ------ | -------------------------------------- |
+| `message`     | string | Success message                        |
+| `customer_id` | string | Unique identifier of the account       |
+| `status`      | string | New status of the account ("archived") |
 
 **Example Response**
 
 ```json
 {
-  "message": "Virtual account archived successfully.",
-  "account_id": "va_1234567890abcdef",
-  "status": "archived"
+  "message": "Virtual account deleted successfully."
 }
-
 ```
 
 
+
+{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/YzoZPKa" %}
 
 ### Enable Virtual Account
 
