@@ -4,17 +4,10 @@
 * [Introduction to Yativo](introduction-to-yativo/README.md)
   * [Financial Infrastructure](introduction-to-yativo/financial-infrastructure.md)
   * [About Us](introduction-to-yativo/about-us.md)
-* [Yativo API Glossary](yativo-api-glossary.md)
-* [Getting Started with Yativo API](getting-started-with-yativo-api.md)
-* [Authentication](authentication.md)
-* [Customer](customer/README.md)
-  * [Get Customers](customer/get-customers.md)
-  * [Retrieve customer](customer/retrieve-customer.md)
-  * [Add Customer](customer/add-customer.md)
-  * [Update customer data](customer/update-customer-data.md)
-  * [Delete Customer](customer/delete-customer.md)
-* [Supported Countries, Currencies and Payment Method](supported-countries-currencies-and-payment-method.md)
 * [Business Plans](business-plans.md)
+* [Getting Started with Yativo API](getting-started-with-yativo-api.md)
+* [Yativo API Glossary](yativo-api-glossary.md)
+* [Authentication](authentication.md)
 * [API reference](api-reference/README.md)
   * [Misc.](api-reference/misc./README.md)
     * [Countries](api-reference/misc./countries.md)
@@ -35,6 +28,16 @@
   * [Customer Verification](compliance/verification/customer-verification.md)
   * [Global Business Search](compliance/verification/global-business-search.md)
 * [Supported Jurisdiction](compliance/supported-jurisdiction.md)
+* [Supported Countries, Currencies and Payment Method](compliance/supported-countries-currencies-and-payment-method.md)
+
+## User Management
+
+* [Customer](user-management/customer/README.md)
+  * [Get Customers](user-management/customer/get-customers.md)
+  * [Retrieve customer](user-management/customer/retrieve-customer.md)
+  * [Add Customer](user-management/customer/add-customer.md)
+  * [Update customer data](user-management/customer/update-customer-data.md)
+  * [Delete Customer](user-management/customer/delete-customer.md)
 
 ## Payments
 
