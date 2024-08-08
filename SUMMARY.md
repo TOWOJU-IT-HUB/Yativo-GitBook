@@ -48,8 +48,10 @@
 
 * [Currencies](payments/currencies.md)
 * [Crypto Wallets](payments/crypto-wallets/README.md)
-  * [Fetch Wallets](payments/crypto-wallets/fetch-wallets.md)
-  * [Get Wallet Address](payments/crypto-wallets/get-wallet-address.md)
+  * [Generate Wallet Address](payments/crypto-wallets/generate-wallet-address.md)
+  * [Fetch Wallet Address](payments/crypto-wallets/fetch-wallet-address.md)
+  * [Crypto Deposit History](payments/crypto-wallets/crypto-deposit-history.md)
+  * [Single crypto deposit history](payments/crypto-wallets/single-crypto-deposit-history.md)
 * [Payout](payments/payout/README.md)
   * [Single Payout](payments/payout/single-payout.md)
   * [Batch Payout](payments/payout/batch-payout.md)

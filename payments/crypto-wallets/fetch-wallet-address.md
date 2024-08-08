@@ -1,20 +1,37 @@
-# Fetch Wallets
+# Fetch Wallet Address
 
-#### API Documentation
+This endpoint helps fetch all crypto wallet addresses in the system tied to your account
 
-**Endpoint**: `POST {{baseUrl}}/crypto/get-wallets`
+**Endpoint**: `GET {{baseUrl}}/crypto/get-wallets`
 
 **Authorization**: Bearer Token
 
-**Request Body**:
+**Response Example**:
+
+```json
+[
+    {
+        "currency": "USDT.TRC20",
+        "address": "TXYZ1234ABC5678EFG9012HIJKL3456MNO789PQR",
+        "balance": 100.0
+    },
+    {
+        "currency": "BTC",
+        "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+        "balance": 0.5
+    }
+]
+```
 
 ```json
 {
-    "currency": "USDT.TRC20"
+    "error": "Invalid authorization token"
 }
 ```
 
-Example Request&#x20;
+
+
+**Request Example**
 
 {% tabs %}
 {% tab title="PHP" %}
@@ -25,16 +42,10 @@ $accessToken = 'YOUR_ACCESS_TOKEN';
 
 $url = $baseUrl . '/crypto/get-wallets';
 
-$data = [
-    'currency' => 'USDT.TRC20'
-];
-
 $options = [
     'http' => [
-        'header'  => "Authorization: Bearer $accessToken\r\n" .
-                     "Content-Type: application/json\r\n",
-        'method'  => 'POST',
-        'content' => json_encode($data)
+        'header'  => "Authorization: Bearer $accessToken\r\n",
+        'method'  => 'GET'
     ]
 ];
 
@@ -48,35 +59,30 @@ if ($response === FALSE) {
 $responseData = json_decode($response, true);
 print_r($responseData);
 ?>
-
+// Some code
 ```
 {% endtab %}
 
 {% tab title="Python" %}
 ```python
 import requests
-import json
 
 baseUrl = 'https://api.yativo.com'
 accessToken = 'YOUR_ACCESS_TOKEN'
 url = f'{baseUrl}/crypto/get-wallets'
 
-data = {
-    'currency': 'USDT.TRC20'
-}
-
 headers = {
-    'Authorization': f'Bearer {accessToken}',
-    'Content-Type': 'application/json'
+    'Authorization': f'Bearer {accessToken}'
 }
 
-response = requests.post(url, headers=headers, data=json.dumps(data))
+response = requests.get(url, headers=headers)
 
 if response.status_code != 200:
     print(f'Error: {response.status_code} - {response.text}')
 else:
     responseData = response.json()
-    print('Wallet address generated:', responseData)
+    print('Crypto wallets:', responseData)
+
 ```
 {% endtab %}
 
@@ -86,17 +92,11 @@ const baseUrl = 'https://api.yativo.com';
 const accessToken = 'YOUR_ACCESS_TOKEN';
 const url = `${baseUrl}/crypto/get-wallets`;
 
-const data = {
-  currency: 'USDT.TRC20'
-};
-
 const options = {
-  method: 'POST',
+  method: 'GET',
   headers: {
-    'Authorization': `Bearer ${accessToken}`,
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(data)
+    'Authorization': `Bearer ${accessToken}`
+  }
 };
 
 fetch(url, options)
@@ -106,7 +106,7 @@ fetch(url, options)
     }
     return response.json();
   })
-  .then(data => console.log('Wallet address generated:', data))
+  .then(data => console.log('Crypto wallets:', data))
   .catch(error => console.error('Error:', error));
 
 ```
@@ -114,3 +114,4 @@ fetch(url, options)
 {% endtabs %}
 
 {% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/ExBWxNa" %}
+
