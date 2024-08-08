@@ -1,5 +1,41 @@
 # Virtual Account Management
 
+### Fetch Virtual Accounts
+
+#### Endpoint
+
+**GET** `{{baseUrl}}`/business/virtual-account
+
+#### Description
+
+This endpoint allows you to fetch all virtual accounts
+
+#### Request
+
+**Headers**
+
+* `Content-Type: application/json`
+* `Authorization: Bearer {your_api_token}`
+
+###
+
+### Fetch Virtual Account
+
+#### Endpoint
+
+**POST** `{{baseUrl}}/business/virtual-account/{{customerID}}`
+
+#### Description
+
+This endpoint allows you to fetch a particular virtual account, effectively marking it as inactive and preventing any further transactions.
+
+#### Request
+
+**Headers**
+
+* `Content-Type: application/json`
+* `Authorization: Bearer {your_api_token}`
+
 ### Delete Virtual Account
 
 #### Endpoint

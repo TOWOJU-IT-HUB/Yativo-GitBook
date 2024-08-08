@@ -4,15 +4,20 @@
 * [Introduction to Yativo](introduction-to-yativo/README.md)
   * [Financial Infrastructure](introduction-to-yativo/financial-infrastructure.md)
   * [About Us](introduction-to-yativo/about-us.md)
+* [Dashboard](dashboard.md)
 * [Business Plans](business-plans.md)
 * [Getting Started with Yativo API](getting-started-with-yativo-api.md)
 * [Yativo API Glossary](yativo-api-glossary.md)
-* [Authentication](authentication.md)
 * [API reference](api-reference/README.md)
   * [Misc.](api-reference/misc./README.md)
     * [Countries](api-reference/misc./countries.md)
     * [States](api-reference/misc./states.md)
     * [City](api-reference/misc./city.md)
+
+## Security and Authentication
+
+* [Security](security-and-authentication/security.md)
+* [Authentication](security-and-authentication/authentication.md)
 
 ## Environment
 
@@ -64,11 +69,14 @@
   * [Get Transactions](payments/virtual-cards/get-transactions.md)
   * [Freeze and Unfreeze Card](payments/virtual-cards/freeze-and-unfreeze-card.md)
 * [Virtual Accounts](payments/virtual-accounts/README.md)
-  * [Create VIrtual Accounts](payments/virtual-accounts/create-virtual-accounts.md)
-  * [Create Multiple Virtual Accounts](payments/virtual-accounts/create-multiple-virtual-accounts.md)
-  * [Argentina Virtual Account](payments/virtual-accounts/argentina-virtual-account.md)
-  * [MXN Virtual Account](payments/virtual-accounts/mxn-virtual-account.md)
-  * [Brazil Virtual Account](payments/virtual-accounts/brazil-virtual-account.md)
+  * [Create VIrtual Accounts](payments/virtual-accounts/create-virtual-accounts/README.md)
+    * [Argentina Virtual Account](payments/virtual-accounts/create-virtual-accounts/argentina-virtual-account.md)
+    * [Mexico Virtual Account](payments/virtual-accounts/create-virtual-accounts/mxn-virtual-account.md)
+    * [Brazil Virtual Account](payments/virtual-accounts/create-virtual-accounts/brazil-virtual-account.md)
+  * [Create Multiple Virtual Accounts](payments/virtual-accounts/create-multiple-virtual-accounts/README.md)
+    * [Argentina Virtual Account](payments/virtual-accounts/create-multiple-virtual-accounts/argentina-virtual-account.md)
+    * [Mexico Virtual Account](payments/virtual-accounts/create-multiple-virtual-accounts/mxn-virtual-account.md)
+    * [Brazil Virtual Account](payments/virtual-accounts/create-multiple-virtual-accounts/brazil-virtual-account.md)
   * [Virtual account status](payments/virtual-accounts/virtual-account-status.md)
   * [Virtual Account Management](payments/virtual-accounts/virtual-account-management.md)
   * [Transaction History](payments/virtual-accounts/transaction-history.md)

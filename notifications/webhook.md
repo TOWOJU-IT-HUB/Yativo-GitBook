@@ -25,3 +25,13 @@ This API allows you to Get the webhook URL you set.
 * **Endpoint**: `{{baseUrl}}/api/v1/business/webhook`
 * **Method**: `GET`
 * **Content-Type**: `application/json`
+
+
+
+**Update Webhook Endpoint**
+
+This API allows you to Get the webhook URL you set.
+
+* **Endpoint**: `{{baseUrl}}/api/v1/business/webhook`
+* **Method**: `PUT`
+* **Content-Type**: `application/json`
