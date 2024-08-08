@@ -48,7 +48,7 @@
 
 * [Currencies](payments/currencies.md)
 * [Crypto Wallets](payments/crypto-wallets/README.md)
-  * [Get Wallet](payments/crypto-wallets/get-wallet.md)
+  * [Fetch Wallets](payments/crypto-wallets/fetch-wallets.md)
   * [Get Wallet Address](payments/crypto-wallets/get-wallet-address.md)
 * [Payout](payments/payout/README.md)
   * [Single Payout](payments/payout/single-payout.md)

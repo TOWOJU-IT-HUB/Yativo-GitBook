@@ -1,8 +1,8 @@
-# Get Wallet
+# Fetch Wallets
 
 #### API Documentation
 
-**Endpoint**: `POST {{baseUrl}}/crypto`
+**Endpoint**: `POST {{baseUrl}}/crypto/get-wallets`
 
 **Authorization**: Bearer Token
 
@@ -23,7 +23,7 @@ Example Request&#x20;
 $baseUrl = 'https://api.yativo.com';
 $accessToken = 'YOUR_ACCESS_TOKEN';
 
-$url = $baseUrl . '/crypto';
+$url = $baseUrl . '/crypto/get-wallets';
 
 $data = [
     'currency' => 'USDT.TRC20'
@@ -59,7 +59,7 @@ import json
 
 baseUrl = 'https://api.yativo.com'
 accessToken = 'YOUR_ACCESS_TOKEN'
-url = f'{baseUrl}/crypto'
+url = f'{baseUrl}/crypto/get-wallets'
 
 data = {
     'currency': 'USDT.TRC20'
@@ -84,7 +84,7 @@ else:
 ```javascript
 const baseUrl = 'https://api.yativo.com';
 const accessToken = 'YOUR_ACCESS_TOKEN';
-const url = `${baseUrl}/crypto`;
+const url = `${baseUrl}/crypto/get-wallets`;
 
 const data = {
   currency: 'USDT.TRC20'
