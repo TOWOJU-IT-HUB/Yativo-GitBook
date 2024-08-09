@@ -82,6 +82,7 @@
   * [Virtual account status](payments/virtual-accounts/virtual-account-status.md)
   * [Virtual Account Management](payments/virtual-accounts/virtual-account-management.md)
   * [Transaction History](payments/virtual-accounts/transaction-history.md)
+  * [Refund Virtual Account Payin](payments/virtual-accounts/refund-virtual-account-payin.md)
 
 ## Foreign Exchange
 
