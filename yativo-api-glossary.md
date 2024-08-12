@@ -86,7 +86,9 @@ A Dynamic Form within the Yativo API is a form that has it's form fields populat
 
 Exchange Rate refers to the rate at which one currency can be exchanged for another currency, exchange rates are used to calculate the equivalent value of one currency in terms of another, facilitating currency conversions for transactions or financial operations.
 
+#### **UBO**
 
+refers to the individual or individuals who ultimately own or control a company or other legal entity. This concept is crucial in regulatory and compliance frameworks to ensure transparency and prevent illegal activities such as money laundering, tax evasion, and corruption.
 
 
 
