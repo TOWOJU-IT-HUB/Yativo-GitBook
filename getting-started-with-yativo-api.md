@@ -13,6 +13,10 @@ First, sign up for a Yativo Business account:
 * Visit [Yativo.com](https://www.yativo.com) and click on the "Sign Up" button.
 * Fill in the required information to create your account.
 
+
+
+{% embed url="https://drive.google.com/file/d/1Yec0S_i0vemYlMkJgFmCIv6E3F8O-zU1/view?usp=sharing" %}
+
 ### 2. Verify Your Business Information
 
 As part of the sign up process, verify your business information:
