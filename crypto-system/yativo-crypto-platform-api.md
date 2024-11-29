@@ -2,7 +2,7 @@
 
 **Welcome to the Yativo Crypto Platform API!**
 
-This API is part of the **Yativo Fintech-as-a-Service (FaaS) infrastructure**, designed to empower businesses with the tools to integrate cryptocurrency capabilities into their platforms seamlessly. The Crypto Platform enables features like wallet management, customer account handling, transaction processing, asset pricing, and webhook notifications.
+This APIs help Yativo businesses for crypto use cases.
 
 ### **Base URL**
 
