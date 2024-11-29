@@ -96,6 +96,7 @@
 
 ## Crypto System
 
+* [Yativo Crypto Platform API](crypto-system/yativo-crypto-platform-api.md)
 * [Authentication](crypto-system/authentication.md)
 * [Accounts](crypto-system/accounts.md)
 * [Customers](crypto-system/customers.md)
