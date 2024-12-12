@@ -145,4 +145,6 @@ curl_close($curl);
 
 
 
-{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/yLdgNmw" %}
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/fb942a7e-40ce-4a5e-90f7-089c6d53de8d" method="get" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}

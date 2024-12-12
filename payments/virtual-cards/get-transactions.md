@@ -121,3 +121,9 @@ If the request is invalid or there are issues processing the request, the follow
   * **cardId**: Unique identifier of the virtual card associated with the transaction.
 
 By following the above details, you can retrieve the transaction history for a specific virtual card.
+
+
+
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/virtual/cards/transactions/{cardId}" method="get" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}

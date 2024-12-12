@@ -90,3 +90,8 @@ The response will include the status of the request, relevant message, and detai
 {% endtab %}
 {% endtabs %}
 
+
+
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/virtual/cards/get/{cardId}" method="get" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}

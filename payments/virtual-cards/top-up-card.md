@@ -20,7 +20,7 @@ layout:
 
 ### Description
 
-This endpoint allows you to top up a virtual card with a specified amount for a customer.&#x20;
+This endpoint allows you to top up a virtual card with a specified amount for a customer.
 
 ### Card Issuing Fees
 
@@ -114,3 +114,9 @@ If the top-up request is successful and in progress, the following success respo
   * **message**: A message indicating that the card top-up is in progress.
 
 By following the above details, you can successfully top up a virtual card for a customer.
+
+
+
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/virtual/cards/topup" method="post" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}

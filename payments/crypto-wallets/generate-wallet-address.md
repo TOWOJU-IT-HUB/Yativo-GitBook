@@ -113,4 +113,8 @@ fetch(url, options)
 {% endtab %}
 {% endtabs %}
 
-{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/ExBWxNa" %}
+
+
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/crypto/create-wallet" method="post" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}

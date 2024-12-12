@@ -138,4 +138,6 @@ fetch(url, {
 
 
 
-{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/GRbrora" %}
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/verification/business-search" method="post" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}

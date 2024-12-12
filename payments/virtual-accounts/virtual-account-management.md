@@ -17,7 +17,11 @@ This endpoint allows you to fetch all virtual accounts
 * `Content-Type: application/json`
 * `Authorization: Bearer {your_api_token}`
 
-###
+
+
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/virtual-account" method="get" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}
 
 ### Fetch Virtual Account
 
@@ -35,6 +39,12 @@ This endpoint allows you to fetch a particular virtual account, effectively mark
 
 * `Content-Type: application/json`
 * `Authorization: Bearer {your_api_token}`
+
+
+
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/virtual-account/show/{account_id}" method="get" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}
 
 ### Delete Virtual Account
 
@@ -87,7 +97,9 @@ Content-Type: application/json
 
 
 
-{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/YzoZPKa" %}
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/virtual-account/delete-virtual-account/{account_id}" method="delete" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}
 
 ### Enable Virtual Account
 
@@ -142,7 +154,9 @@ Content-Type: application/json
 
 ```
 
-
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/virtual/cards/activate" method="post" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}
 
 ### Disable Virtual Account
 
@@ -269,3 +283,4 @@ curl -X POST https://api.yativo.com/api/v1/virtual-accounts/va_1234567890abcdef/
 ```
 {% endtab %}
 {% endtabs %}
+

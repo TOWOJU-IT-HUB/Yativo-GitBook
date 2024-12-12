@@ -1,4 +1,4 @@
-# Create Multiple VIrtual Accounts
+# Create VIrtual Accounts
 
 ## Create virtual account
 
@@ -206,9 +206,10 @@ fetch(url, options)
   })
   .then(data => console.log('Response:', data))
   .catch(error => console.error('Error:', error));
-
 ```
 {% endtab %}
 {% endtabs %}
 
-{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/ZEdeEqY" %}
+{% swagger src="../../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/virtual-account/create" method="post" %}
+[Zee_v3_OpenAPI.yaml](../../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}

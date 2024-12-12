@@ -16,7 +16,9 @@ This API allows you to set a webhook URL where status notifications from Yativo 
 
 
 
-{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/jOjBNoK" %}
+{% swagger src="../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/webhook" method="post" %}
+[Zee_v3_OpenAPI.yaml](../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}
 
 **Get Webhook Endpoint**
 

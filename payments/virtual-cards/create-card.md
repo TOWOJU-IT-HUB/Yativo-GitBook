@@ -105,3 +105,9 @@ If the request is invalid or there are issues processing the request, the follow
     * **countryCode**: Country code of the billing address.
 
 By following the above details, you can successfully create a new virtual card for a customer.
+
+
+
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/virtual/cards/create" method="post" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}

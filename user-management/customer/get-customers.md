@@ -161,4 +161,6 @@ echo $response;
 
 
 
-{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/WNqRvmK" %}
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer" method="get" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}

@@ -202,3 +202,7 @@ curl -X GET {{baseUrl}}/api/v1/transactions/txn_abcdef123456 \
 ```
 {% endtab %}
 {% endtabs %}
+
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/virtual-account/history/{accountNumber}" method="post" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}

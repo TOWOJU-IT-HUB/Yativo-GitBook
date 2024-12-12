@@ -26,3 +26,9 @@ The `/crypto/deposit-histories/:id` endpoint allows businesses to retrieve detai
 * **`updatedAt`**: The timestamp of the last update to the transaction's status.
 * **`confirmations`**: The number of blockchain confirmations the deposit has received.
 * **`network`**: The blockchain network on which the transaction was conducted (e.g., Bitcoin, Ethereum).
+
+
+
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/crypto/deposit-history/{cryptoDepositId}" method="get" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}

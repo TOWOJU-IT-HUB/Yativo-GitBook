@@ -73,10 +73,3 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vM
 
 By following these steps, you can authenticate with the Yativo API and securely access its protected resources using the provided bearer token.
 
-
-
-{% swagger src="../.gitbook/assets/output.openapi.yaml" path="/auth/login/magic" method="post" %}
-[output.openapi.yaml](../.gitbook/assets/output.openapi.yaml)
-{% endswagger %}
-
-{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/vYqyLKM" %}

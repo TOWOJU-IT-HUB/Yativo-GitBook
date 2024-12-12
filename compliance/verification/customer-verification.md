@@ -73,4 +73,6 @@ The API uses standard HTTP status codes to indicate the success or failure of an
 
 
 
-{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/zYVNrxz" %}
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/verification/verify-customer" method="post" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}

@@ -108,3 +108,9 @@ If the request is invalid or there are issues processing the request, the follow
   * **error**: A message indicating the issue (e.g., "Error encountered, please check your request").
 
 By following the above details, you can successfully freeze or unfreeze a virtual card.
+
+
+
+{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/virtual/cards/update/{cardId}" method="put" %}
+[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% endswagger %}
