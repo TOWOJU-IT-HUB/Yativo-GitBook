@@ -14,7 +14,7 @@ The <mark style="color:green;">`POST`</mark> `{{baseUrl}}/customer`  endpoint is
 * **Endpoint URL**: \{{baseUrl\}}`/customer`
 * **Authentication**: Requires Bearer token to ensure secure access.
 * **Request Payload**: Accepts a JSON object containing detailed customer information, such as name, email, phone number, address, and identification details.
-* <mark style="background-color:orange;">**Note the customer Identity Document information will not be available after this request.**</mark>
+* <mark style="background-color:orange;">**Note the customer KYC can be carried out by the user via link sent to the user email or you can send the information via API.**</mark>
 
 ## Create a new user
 
