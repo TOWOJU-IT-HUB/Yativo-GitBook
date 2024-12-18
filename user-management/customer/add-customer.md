@@ -33,24 +33,12 @@ The <mark style="color:green;">`POST`</mark> `{{baseUrl}}/customer`  endpoint is
 {% tab title="Request body" %}
 ```json
 {
-    "customer_name": "Test Customer",
-    "customer_email": "test_customer@yativo.com",
-    "customer_phone": "+19203751411",
+    "customer_name": "Emmanuel A Towoju",
+    "customer_email": "tbash7676@gmail.com",
+    "customer_phone": "+2349039395114",
     "customer_country": "USA",
-    "customer_address": {
-        "city": "Anytown",
-        "state": "Anystate",
-        "zipcode": "12345",
-        "street": "1234 Elm Street",
-        "number": "5678",
-        "country": "USA"
-    },
-    "customer_idType": "PASSPORT",
-    "customer_idNumber": "A10600011",
-    "customer_idCountry": "Chile",
-    "customer_idExpiration": "04/24",
-    "customer_idFront": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=", // base64_encode image
-    "customer_idBack": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=" // base64_encode image
+    "customer_type": "individual", // or business, defaults to individual when not passed
+    "send_kyc_mail": true // default to true. email with URL to complete kyc will be sent to custome_email
 }
 ```
 {% endtab %}
@@ -63,24 +51,12 @@ import json
 url = "{{baseUrl}}/customer"
 
 payload = json.dumps({
-  "customer_name": "Test Customer",
-  "customer_email": "test_customer@yativo.com",
-  "customer_phone": "+19203751411",
-  "customer_country": "USA",
-  "customer_address": {
-    "city": "Anytown",
-    "state": "Anystate",
-    "zipcode": "12345",
-    "street": "1234 Elm Street",
-    "number": "5678",
-    "country": "USA"
-  },
-  "customer_idType": "PASSPORT",
-  "customer_idNumber": "A10600011",
-  "customer_idCountry": "Chile",
-  "customer_idExpiration": "04/24",
-  "customer_idFront": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=",
-  "customer_idBack": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII="
+    "customer_name": "Emmanuel A Towoju",
+    "customer_email": "tbash7676@gmail.com",
+    "customer_phone": "+2349039395114",
+    "customer_country": "USA",
+    "customer_type": "individual", // or business, defaults to individual when not passed
+    "send_kyc_mail": true // default to true. email with URL to complete kyc will be sent to custome_email
 })
 headers = {
   'Content-Type': 'application/json',
@@ -107,24 +83,12 @@ request = Net::HTTP::Post.new(url)
 request["Content-Type"] = "application/json"
 request["Authorization"] = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
 request.body = JSON.dump({
-  "customer_name": "Test Customer",
-  "customer_email": "test_customer@yativo.com",
-  "customer_phone": "+19203751411",
-  "customer_country": "USA",
-  "customer_address": {
-    "city": "Anytown",
-    "state": "Anystate",
-    "zipcode": "12345",
-    "street": "1234 Elm Street",
-    "number": "5678",
-    "country": "USA"
-  },
-  "customer_idType": "PASSPORT",
-  "customer_idNumber": "A10600011",
-  "customer_idCountry": "Chile",
-  "customer_idExpiration": "04/24",
-  "customer_idFront": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=",
-  "customer_idBack": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII="
+    "customer_name": "Emmanuel A Towoju",
+    "customer_email": "tbash7676@gmail.com",
+    "customer_phone": "+2349039395114",
+    "customer_country": "USA",
+    "customer_type": "individual", // or business, defaults to individual when not passed
+    "send_kyc_mail": true // default to true. email with URL to complete kyc will be sent to custome_email
 })
 
 response = http.request(request)
@@ -137,24 +101,12 @@ puts response.read_body
 ```javascript
 // Some codconst axios = require('axios');
 let data = JSON.stringify({
-  "customer_name": "Test Customer",
-  "customer_email": "test_customer@yativo.com",
-  "customer_phone": "+19203751411",
-  "customer_country": "USA",
-  "customer_address": {
-    "city": "Anytown",
-    "state": "Anystate",
-    "zipcode": "12345",
-    "street": "1234 Elm Street",
-    "number": "5678",
-    "country": "USA"
-  },
-  "customer_idType": "PASSPORT",
-  "customer_idNumber": "A10600011",
-  "customer_idCountry": "Chile",
-  "customer_idExpiration": "04/24",
-  "customer_idFront": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=",
-  "customer_idBack": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII="
+    "customer_name": "Emmanuel A Towoju",
+    "customer_email": "tbash7676@gmail.com",
+    "customer_phone": "+2349039395114",
+    "customer_country": "USA",
+    "customer_type": "individual", // or business, defaults to individual when not passed
+    "send_kyc_mail": true // default to true. email with URL to complete kyc will be sent to custome_email
 });
 
 let config = {
@@ -187,24 +139,12 @@ $headers = [
   'Authorization' => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
 ];
 $body = '{
-  "customer_name": "Test Customer",
-  "customer_email": "test_customer@yativo.com",
-  "customer_phone": "+19203751411",
-  "customer_country": "USA",
-  "customer_address": {
-    "city": "Anytown",
-    "state": "Anystate",
-    "zipcode": "12345",
-    "street": "1234 Elm Street",
-    "number": "5678",
-    "country": "USA"
-  },
-  "customer_idType": "PASSPORT",
-  "customer_idNumber": "A10600011",
-  "customer_idCountry": "Chile",
-  "customer_idExpiration": "04/24",
-  "customer_idFront": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=",
-  "customer_idBack": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII="
+    "customer_name": "Emmanuel A Towoju",
+    "customer_email": "tbash7676@gmail.com",
+    "customer_phone": "+2349039395114",
+    "customer_country": "USA",
+    "customer_type": "individual", // or business, defaults to individual when not passed
+    "send_kyc_mail": true // default to true. email with URL to complete kyc will be sent to custome_email
 }';
 $request = new Request('POST', '{{baseUrl}}/customer', $headers, $body);
 $res = $client->sendAsync($request)->wait();
@@ -218,24 +158,12 @@ echo $res->getBody();
 const url = '{{baseUrl}}/customer';
 
 const payload = JSON.stringify({
-  customer_name: 'Test Customer',
-  customer_email: 'test_customer@yativo.com',
-  customer_phone: '+19203751411',
-  customer_country: 'USA',
-  customer_address: {
-    city: 'Anytown',
-    state: 'Anystate',
-    zipcode: '12345',
-    street: '1234 Elm Street',
-    number: '5678',
-    country: 'USA'
-  },
-  customer_idType: 'PASSPORT',
-  customer_idNumber: 'A10600011',
-  customer_idCountry: 'Chile',
-  customer_idExpiration: '04/24',
-  customer_idFront: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII=',
-  customer_idBack: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgMBAZ8AItQAAAAASUVORK5CYII='
+    "customer_name": "Emmanuel A Towoju",
+    "customer_email": "tbash7676@gmail.com",
+    "customer_phone": "+2349039395114",
+    "customer_country": "USA",
+    "customer_type": "individual", // or business, defaults to individual when not passed
+    "send_kyc_mail": true // default to true. email with URL to complete kyc will be sent to custome_email
 });
 
 const options = {
@@ -267,26 +195,24 @@ fetch(url, options)
 {% tab title="201" %}
 ```json
 {
-    "status": "success",
-    "status_code": 201,
-    "message": "Request successful",
-    "data": {
-        "customer_id": "5ae2f659-45d2-4256-9f82-2811726a5376",
-        "customer_name": "Test Customer",
-        "customer_email": "test_customer5@yativo.com",
-        "customer_phone": "+19203751411",
-        "customer_country": "USA",
-        "customer_address": {
-            "city": "Anytown",
-            "state": "Anystate",
-            "zipcode": "12345",
-            "street": "1234 Elm Street",
-            "number": "5678",
-            "country": "USA"
-        }
-    }
+  "status": "success",
+  "status_code": 200,
+  "message": "Customer created successfully",
+  "data": {
+    "id": "21fe7601-3be3-4d15-94c0-a94b15d8b872",
+    "full_name": "Emmanuel A Towoju",
+    "email": "perfectwordpre@gmail.com",
+    "type": "individual",
+    "kyc_link": "https://bridge.withpersona.com/verify?inquiry-template-id=itmpl_NtHYpb9AbEYCPxGo5iRbc9d2&fields[developer_id]=2da859f2-9764-48e6-92e6-dd9f6747801b&fields[iqt_token]=46f7565fe2ba42843b957cec6d783e48f85dff6d6ea56cf5753634b09a3214e8WwzmNl&reference-id=7d5b9315-796e-4d4d-b771-1ee5997e4abf&redirect-uri=https%3A%2F%2Fyativo-web-design-nine.vercel.app%2F&environment-id=env_UWeuo2CnqFQXVeKujbQLBx6u",
+    "tos_link": "https://dashboard.bridge.xyz/accept-terms-of-service?customer_id=7d5b9315-796e-4d4d-b771-1ee5997e4abf",
+    "kyc_status": "approved",
+    "rejection_reasons": [],
+    "tos_status": "pending",
+    "created_at": "2024-12-01T18:46:15.392Z",
+    "customer_id": "7d5b9315-796e-4d4d-b771-1ee5997e4abf",
+    "persona_inquiry_type": "gov_id_db"
+  }
 }
-
 ```
 {% endtab %}
 
