@@ -63,6 +63,7 @@
     * [Update Beneficiary](payments/payout/beneficiaries/update-beneficiary.md)
     * [Archive Beneficiary](payments/payout/beneficiaries/archive-beneficiary.md)
     * [Add Beneficiary](payments/payout/beneficiaries/add-beneficiary.md)
+* [Payin](payments/payin.md)
 * [Virtual Cards](payments/virtual-cards/README.md)
   * [Supported Currency, Country](payments/virtual-cards/supported-currency-country.md)
   * [Create card](payments/virtual-cards/create-card.md)
