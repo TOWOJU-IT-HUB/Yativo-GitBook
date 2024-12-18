@@ -30,24 +30,39 @@ Authorization: Bearer YOUR_API_KEY
 //Example request
 {
     "first_name": "John",
-    "customer_id": "CUST_123456",
+    "customer_id": "f66b8549-97a9-48f4-aee7-e546e4859ad8",
     "last_name": "Doe",
     "middle_name": "Smith",
     "email": "john.doe@example.com",
     "phone": "+1234567890",
     "dob": "1980-01-01",
+    "longitude":  "99.90",
+    "latitude": "34.533",
     "gender": "Male",
     "mobile": "+1234567890",
     "street": "123 Main Street",
     "landmark": "Near City Park",
     "lga": "Central Business District",
-    "state": "California",
+    "state": "TX", // ISO 3166-2 subdivision code. Must be supplied if the country has subdivisions.
+    "postal_code": "90011",
+    "country": "USA", // Three-letter alpha-3 country code as defined in the ISO 3166-1 spec.
     "date_of_birth": "1980-01-01",
     "ip_address": "192.168.1.1",
-    "selfieimage": "base64_encoded_image_data",
-    "photoidimage": "base64_encoded_image_data",
-    "imageFrontSide": "base64_encoded_image_data",
-    "imageBackSide": "base64_encoded_image_data"
+    "idNumber": "A10200086",
+    "selfieimage": "https://alphamead.lon1.digitaloceanspaces.com/1fa13101-7aad-4c0b-a3ae-4d85bf2b2864/6737740256106_JPEG_20241115_171650_7855778370240702059.jpg",
+    "photoidimage": "https://alphamead.lon1.digitaloceanspaces.com/1fa13101-7aad-4c0b-a3ae-4d85bf2b2864/6737740256106_JPEG_20241115_171650_7855778370240702059.jpg",
+    "imageFrontSide": "https://alphamead.lon1.digitaloceanspaces.com/1fa13101-7aad-4c0b-a3ae-4d85bf2b2864/6737740256106_JPEG_20241115_171650_7855778370240702059.jpg",
+    "imageBackSide": "https://alphamead.lon1.digitaloceanspaces.com/1fa13101-7aad-4c0b-a3ae-4d85bf2b2864/6737740256106_JPEG_20241115_171650_7855778370240702059.jpg",
+    "proof_of_address_document": "https://alphamead.lon1.digitaloceanspaces.com/1fa13101-7aad-4c0b-a3ae-4d85bf2b2864/6737740256106_JPEG_20241115_171650_7855778370240702059.jpg",
+    "tax_identification_number": "75-1234567",
+    "employment_status": "employed",
+    "expected_monthly_payments": "xoxo",
+    "most_recent_occupation": "xoxo",
+    "primary_purpose": "xoxo",
+    "primary_purpose_other": "xoxo",
+    "source_of_funds": "xoxo",
+    "gov_id_country": "xoxo",
+    "gov_id_type": "xoxo"
 }
 ```
 
