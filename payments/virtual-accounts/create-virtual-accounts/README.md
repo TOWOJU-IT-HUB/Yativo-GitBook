@@ -2,7 +2,13 @@
 
 ## Create virtual account
 
-<mark style="color:green;">`POST`</mark> `{{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}`This endpoint allows you to create a virtual account that can be used to receive funds.
+<mark style="color:green;">`POST`</mark> `{{baseUrl}}`/business/virtual-account/create
+
+This endpoint allows you to create a virtual account that can be used to receive funds.
+
+KYC must have been completed by the customer before this can be enabled.
+
+Each customer can have only 1 Virtual account per currency
 
 **Headers**
 
@@ -13,12 +19,10 @@
 
 **Body**
 
-| Name            | Type   | Description        |
-| --------------- | ------ | ------------------ |
-| `customer_id`   | number | Customer ID        |
-| `document_id`   | string | Document Id number |
-| `document_type` | string | The Document type  |
-| `currency`      | string | USD, ARS, MXN, BRL |
+| Name          | Type   | Description   |
+| ------------- | ------ | ------------- |
+| `customer_id` | number | Customer ID   |
+| `currency`    | string | USD, MXN, BRL |
 
 **Response**
 
@@ -65,27 +69,9 @@ $customerId = 'YOUR_CUSTOMER_ID';
 $url = $baseUrl . '/example-endpoint';
 
 $data = [
-    'customer_id' => $customerId,
-    'beneficiary' => [
-        'document' => [
-            'id' => 'A10909999',
-            'type' => 'PASSPORT'
-        ],
-        'name' => 'xoxo',
-        'lastname' => 'xoxo',
-        'type' => 'xoxo'
-    ],
-    'address' => [
-        'city' => 'xoxo',
-        'state' => 'xoxo',
-        'zipcode' => 'xoxo',
-        'street' => 'xoxo',
-        'number' => 'xoxo',
-        'country' => 'xoxo'
-    ],
-    'currency' => 'MXN',
-    'country' => 'MEX'
-];
+    "currency": "USD", // supported are BRL, MXN,
+    "customer_id": "ae68f0ef-0e59-4a23-b8da-9e07bf2af361"
+    ];
 
 $options = [
     'http' => [
@@ -120,26 +106,8 @@ customerId = 'YOUR_CUSTOMER_ID'
 url = f'{baseUrl}/example-endpoint'
 
 data = {
-    'customer_id': customerId,
-    'beneficiary': {
-        'document': {
-            'id': 'A10909999',
-            'type': 'PASSPORT'
-        },
-        'name': 'xoxo',
-        'lastname': 'xoxo',
-        'type': 'xoxo'
-    },
-    'address': {
-        'city': 'xoxo',
-        'state': 'xoxo',
-        'zipcode': 'xoxo',
-        'street': 'xoxo',
-        'number': 'xoxo',
-        'country': 'xoxo'
-    },
-    'currency': 'MXN',
-    'country': 'MEX'
+    "currency": "USD", // supported are BRL, MXN,
+    "customer_id": "ae68f0ef-0e59-4a23-b8da-9e07bf2af361"
 }
 
 headers = {
@@ -166,26 +134,8 @@ const customerId = 'YOUR_CUSTOMER_ID';
 const url = `${baseUrl}/example-endpoint`;
 
 const data = {
-  customer_id: customerId,
-  beneficiary: {
-    document: {
-      id: 'A10909999',
-      type: 'PASSPORT'
-    },
-    name: 'xoxo',
-    lastname: 'xoxo',
-    type: 'xoxo'
-  },
-  address: {
-    city: 'xoxo',
-    state: 'xoxo',
-    zipcode: 'xoxo',
-    street: 'xoxo',
-    number: 'xoxo',
-    country: 'xoxo'
-  },
-  currency: 'MXN',
-  country: 'MEX'
+    "currency": "USD", // supported are BRL, MXN,
+    "customer_id": "ae68f0ef-0e59-4a23-b8da-9e07bf2af361"
 };
 
 const options = {
