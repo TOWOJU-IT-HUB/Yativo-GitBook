@@ -1,28 +1,26 @@
-# Argentina Virtual Account
+# USD Virtual Account
 
 #### Create Argentina Virtual Account Documentation
 
 **Overview**
 
-The Create ARVirtual Account endpoint allows you to create a virtual account for a customer in Argentina. This account facilitates transactions and financial activities within the country. To create an ARVirtual account, you need to provide specific information about the customer and their documentation and the customer must be an Argentinean resident.
+The Create Virtual Account endpoint allows you to create a virtual account for a customer in Argentina. This account facilitates transactions and financial activities within the country. To create a USD Virtual account, you need to provide the Customer ID and st currency to USD in the POST Request.
 
 **Endpoint**
 
-`POST {{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}`
+`POST {{baseUrl}}`/business/virtual-account/create
 
 **Request Body**
 
 The request body should contain the following parameters:
 
 * **customer\_id (required):** The unique identifier of the customer for whom the virtual account is being created. This identifier should be in UUID format.
-* **document\_id (required):** The document ID of the customer. This can be a unique identifier assigned to the customer's official document.
-* **document\_type (required):** The type of document provided. Accepted document types are "CUIT" (Clave Única de Identificación Tributaria), "CUIL" (Clave Única de Identificación Laboral), or "CDI" (Cédula de Identidad).
-* **currency (required):** The currency in which the account will operate. By default, it should be set to "ARS" (Argentine Peso).
+* **currency (required):** The currency in which the account will operate.  It should be set to "USD" (United States Dollars).
 
 **Example Request**
 
 ```http
-POST {{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}
+POST {{baseUrl}}/business/virtual-account/create
 Content-Type: application/json
 
 {
@@ -36,11 +34,9 @@ Content-Type: application/json
 {% tabs %}
 {% tab title="PHP" %}
 ```
-$url = "{{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}";
+$url = "{{baseUrl}}/business/virtual-account/create";
 $data = array(
     "customer_id" => "123e4567-e89b-12d3-a456-426614174000",
-    "document_id" => "A23E4567",
-    "document_type" => "CUIT",
     "currency" => "ARS"
 );
 $data_json = json_encode($data);
@@ -78,11 +74,9 @@ curl_close($curl);
 import requests
 import json
 
-url = "{{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}"
+url = "{{baseUrl}}/business/virtual-account/create"
 data = {
     "customer_id": "123e4567-e89b-12d3-a456-426614174000",
-    "document_id": "A23E4567",
-    "document_type": "CUIT",
     "currency": "ARS"
 }
 headers = {
@@ -102,8 +96,6 @@ print(response.text)
 const url = "{{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}";
 const data = {
     "customer_id": "123e4567-e89b-12d3-a456-426614174000",
-    "document_id": "A23E4567",
-    "document_type": "CUIT",
     "currency": "ARS"
 };
 
@@ -136,8 +128,6 @@ curl -X POST {{baseUrl}}/business/virtual-account/create?customer_id={{customerI
 -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9" \
 -d '{
     "customer_id": "123e4567-e89b-12d3-a456-426614174000",
-    "document_id": "A23E4567",
-    "document_type": "CUIT",
     "currency": "ARS"
 }'
 
@@ -147,7 +137,7 @@ curl -X POST {{baseUrl}}/business/virtual-account/create?customer_id={{customerI
 
 **Response**
 
-Upon successful creation of the ARVirtual account, you will receive a response with the following structure:
+Upon successful creation of the USD Virtual account, you will receive a response with the following structure:
 
 ```json
 {

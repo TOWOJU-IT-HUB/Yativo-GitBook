@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Refund Virtual Account Payin
 
 The `/business/virtual-account/refundPayin/:id` endpoint allows businesses to reverse or refund a virtual account transaction that has been previously made. This can be useful in situations where a payment was made in error, or a refund is required.

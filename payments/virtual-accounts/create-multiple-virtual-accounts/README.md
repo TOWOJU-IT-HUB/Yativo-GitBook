@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Create Multiple Virtual Accounts
 
 ## Create virtual account

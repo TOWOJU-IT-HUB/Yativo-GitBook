@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Virtual account status
 
 ### Check Virtual Account Status

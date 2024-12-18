@@ -73,7 +73,7 @@
   * [Freeze and Unfreeze Card](payments/virtual-cards/freeze-and-unfreeze-card.md)
 * [Virtual Accounts](payments/virtual-accounts/README.md)
   * [Create VIrtual Accounts](payments/virtual-accounts/create-virtual-accounts/README.md)
-    * [Argentina Virtual Account](payments/virtual-accounts/create-virtual-accounts/argentina-virtual-account.md)
+    * [USD Virtual Account](payments/virtual-accounts/create-virtual-accounts/argentina-virtual-account.md)
     * [Mexico Virtual Account](payments/virtual-accounts/create-virtual-accounts/mxn-virtual-account.md)
     * [Brazil Virtual Account](payments/virtual-accounts/create-virtual-accounts/brazil-virtual-account.md)
   * [Create Multiple Virtual Accounts](payments/virtual-accounts/create-multiple-virtual-accounts/README.md)
