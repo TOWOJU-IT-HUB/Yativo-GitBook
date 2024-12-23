@@ -19,8 +19,8 @@ This endpoint allows you to fetch all virtual accounts
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/virtual-account" method="get" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="../../.gitbook/assets/Updated_Zee_v3_OpenAPI.yaml" path="/business/virtual-account" method="get" %}
+[Updated_Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Updated_Zee_v3_OpenAPI.yaml)
 {% endswagger %}
 
 ### Fetch Virtual Account

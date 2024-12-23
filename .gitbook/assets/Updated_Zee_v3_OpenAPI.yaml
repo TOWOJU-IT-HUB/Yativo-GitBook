@@ -1,0 +1,431 @@
+openapi: 3.0.1
+info:
+  title: Yativo API
+  description: "### About Yativo\n\n**Yativo** is a robust platform designed to empower\
+    \ businesses in Latin America (LatAm) by streamlining and optimizing money movement.\
+    \ In today's rapidly evolving financial landscape, Yativo provides a comprehensive\
+    \ suite of tools and services tailored to meet the unique needs of businesses\
+    \ across the region, enabling seamless, secure, and efficient financial operations.\n\
+    \n### **What Yativo Offers**\n\n1. **Cross-Border Transactions**:\n   Yativo simplifies\
+    \ cross-border payments, ensuring businesses can send and receive funds across\
+    \ LatAm and beyond without the complexities typically associated with international\
+    \ banking.\n\n2. **Currency Exchange Solutions**:\n   With Yativo, businesses\
+    \ can effortlessly convert between multiple currencies at competitive exchange\
+    \ rates, empowering them to operate effectively in the global market.\n\n3. **Digital\
+    \ Wallets**:\n   The platform offers secure and intuitive digital wallets that\
+    \ enable businesses to store, transfer, and manage their funds with ease.\n\n\
+    4. **Virtual Accounts**:\n   Businesses can create virtual accounts for specific\
+    \ currencies, making it easier to handle international transactions while minimizing\
+    \ fees and delays.\n\n5. **Compliance and Security**:\n   Yativo is committed\
+    \ to maintaining the highest standards of security and regulatory compliance,\
+    \ providing businesses with peace of mind as they scale their operations.\n\n\
+    ### **Why Yativo?**\n\n- **Tailored for LatAm Businesses**: Yativo understands\
+    \ the challenges and opportunities unique to the LatAm market, providing solutions\
+    \ designed specifically for the region.\n- **Scalable Solutions**: Whether you're\
+    \ a small business or a large enterprise, Yativo\u2019s platform adapts to meet\
+    \ your evolving financial needs.\n- **Reliable Infrastructure**: Built with cutting-edge\
+    \ technology, Yativo ensures fast, reliable, and secure money movement.\n- **Customer-Centric\
+    \ Approach**: The platform offers exceptional customer support, with teams ready\
+    \ to assist businesses in navigating financial operations seamlessly.\n\n### **Empowering\
+    \ LatAm Businesses**\n\nFrom startups to established enterprises, Yativo is committed\
+    \ to fostering growth by removing financial barriers and enabling businesses to\
+    \ thrive in an interconnected world. By leveraging Yativo\u2019s innovative platform,\
+    \ LatAm businesses can focus on their core operations while leaving the complexities\
+    \ of money movement to a trusted partner.\n\nWhether you're looking to expand\
+    \ your operations, manage cross-border payments, or simply streamline your financial\
+    \ processes, Yativo is the platform to help you achieve your goals.\n"
+version: 1.0.0
+servers:
+- url: https://sandbox.yativo.com
+  description: Sandbox Environment
+- url: https://api.yativo.com
+  description: Production Environment
+paths:
+  /swap/init:
+    post:
+      summary: Balance Swap
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                from_currency:
+                  type: string
+                to_currency:
+                  type: string
+                amount:
+                  type: string
+      responses:
+        '200':
+          description: Successful Response
+  /swap/process:
+    post:
+      summary: Complete Swap
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /business/webhook:
+    post:
+      summary: Add/Update  Webhook
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+      responses:
+        '200':
+          description: Successful Response
+  /business/webhook/{webhookId}/regenerate-secret:
+    post:
+      summary: Regenerate webhook
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /business/webhook/:
+    get:
+      summary: Get Webhooks
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /crypto/get-wallets:
+    get:
+      summary: Get Wallets
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /crypto/deposit-histories:
+    get:
+      summary: Deposit Histories
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /crypto/deposit-history/{cryptoDepositId}:
+    get:
+      summary: Deposit History
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /crypto/create-wallet:
+    post:
+      summary: Generate wallet address
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /crypto/wallet/deposit/histories/{walletAddress}:
+    get:
+      summary: Wallet address deposit Histories
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /crypto/customer/wallets/{customerId}:
+    get:
+      summary: Customer wallet addresses
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /business/virtual-account/create:
+    post:
+      summary: Create virtual account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                customer_id:
+                  type: string
+                beneficiary:
+                  type: string
+                address:
+                  type: string
+                currency:
+                  type: string
+                country:
+                  type: string
+      responses:
+        '200':
+          description: Successful Response
+  /business/virtual-account/show/{account_id}:
+    get:
+      summary: Fetch Account Number
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /business/virtual-account:
+    get:
+      summary: Get Account Numbers
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /business/virtual-account/history/{accountNumber}:
+    post:
+      summary: Fetch Account Histories
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /business/virtual-account/bulk-account-creation:
+    post:
+      summary: Create multiple virtual accounts
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /business/virtual-account/delete-virtual-account/{account_id}:
+    delete:
+      summary: Delete Virtual Account
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /business/virtual-account/refundPayin/{externalId}:
+    post:
+      summary: Refund virtual account transaction [MEX, ARS BRL only]
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /business/virtual-account/customer/accounts/{customerId}:
+    get:
+      summary: Customer virtual accounts
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /customer:
+    get:
+      summary: Fetch customers
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+    post:
+      summary: Add customer
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /customer/fb942a7e-40ce-4a5e-90f7-089c6d53de8d:
+    get:
+      summary: Fetch customer
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /customer/virtual/cards/activate:
+    post:
+      summary: Activate customer
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /customer/virtual/cards/create:
+    post:
+      summary: Create Card
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /customer/virtual/cards/topup:
+    post:
+      summary: Fund Card
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                customer_id:
+                  type: string
+                cardId:
+                  type: string
+                amount:
+                  type: string
+      responses:
+        '200':
+          description: Successful Response
+  /customer/virtual/cards/get/{cardId}:
+    get:
+      summary: Get Card
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /customer/virtual/cards/transactions/{cardId}:
+    get:
+      summary: Get Card Transactions
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /customer/virtual/cards/list:
+    get:
+      summary: Get All Cards
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /customer/virtual/cards/update/{cardId}:
+    put:
+      summary: Freeze/UnFreeze Card
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+  /business/configs:
+    get:
+      summary: Business Preferences
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+    put:
+      summary: Update Preferences
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                key:
+                  type: string
+                value:
+                  type: string
+      responses:
+        '200':
+          description: Successful Response
+  /verification/verify-customer:
+    post:
+      summary: Customer verification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                customer_id:
+                  type: string
+                last_name:
+                  type: string
+                middle_name:
+                  type: string
+                email:
+                  type: string
+                phone:
+                  type: string
+                dob:
+                  type: string
+                longitude:
+                  type: string
+                latitude:
+                  type: string
+                gender:
+                  type: string
+                mobile:
+                  type: string
+                street:
+                  type: string
+                landmark:
+                  type: string
+                lga:
+                  type: string
+                state:
+                  type: string
+                date_of_birth:
+                  type: string
+                ip_address:
+                  type: string
+                selfieimage:
+                  type: string
+                photoidimage:
+                  type: string
+                imageFrontSide:
+                  type: string
+                imageBackSide:
+                  type: string
+      responses:
+        '200':
+          description: Successful Response
+  /verification/business-search:
+    post:
+      summary: Global Business Verification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                international_number:
+                  type: string
+                country_code:
+                  type: string
+                business_name:
+                  type: string
+                business_mobile:
+                  type: string
+                first_name:
+                  type: string
+                middle_name:
+                  type: string
+                date_of_birth:
+                  type: string
+                last_name:
+                  type: string
+                email:
+                  type: string
+                mobile:
+                  type: string
+                street:
+                  type: string
+                landmark:
+                  type: string
+                lga:
+                  type: string
+                city:
+                  type: string
+                state:
+                  type: string
+                ip_address:
+                  type: string
+      responses:
+        '200':
+          description: Successful Response
+  /local/banks?country=MEX:
+    get:
+      summary: Get Banks by country
+      requestBody: null
+      responses:
+        '200':
+          description: Successful Response
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+- BearerAuth: []
