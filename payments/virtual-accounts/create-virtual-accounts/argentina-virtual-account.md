@@ -1,10 +1,10 @@
 # USD Virtual Account
 
-#### Create Argentina Virtual Account Documentation
+#### Create USD Virtual Account Documentation
 
 **Overview**
 
-The Create Virtual Account endpoint allows you to create a virtual account for a customer in Argentina. This account facilitates transactions and financial activities within the country. To create a USD Virtual account, you need to provide the Customer ID and st currency to USD in the POST Request.
+The Create Virtual Account endpoint allows you to create a virtual account for a customer. This account enables your customer to receive USD deposits via ACH or FEDWIRE. Third party deposits are also supported, but we may ask for more information. To create a USD Virtual account, you need to provide the Customer ID and currency to USD in the POST Request.
 
 **Endpoint**
 
@@ -25,9 +25,7 @@ Content-Type: application/json
 
 {
     "customer_id": "123e4567-e89b-12d3-a456-426614174000",
-    "document_id": "A23E4567",
-    "document_type": "CUIT",
-    "currency": "ARS"
+    "currency": "USD"
 }
 ```
 
@@ -37,7 +35,7 @@ Content-Type: application/json
 $url = "{{baseUrl}}/business/virtual-account/create";
 $data = array(
     "customer_id" => "123e4567-e89b-12d3-a456-426614174000",
-    "currency" => "ARS"
+    "currency" => "USD"
 );
 $data_json = json_encode($data);
 
@@ -77,7 +75,7 @@ import json
 url = "{{baseUrl}}/business/virtual-account/create"
 data = {
     "customer_id": "123e4567-e89b-12d3-a456-426614174000",
-    "currency": "ARS"
+    "currency": "USD"
 }
 headers = {
     'Content-Type': 'application/json',
@@ -96,7 +94,7 @@ print(response.text)
 const url = "{{baseUrl}}/business/virtual-account/create?customer_id={{customerID}}";
 const data = {
     "customer_id": "123e4567-e89b-12d3-a456-426614174000",
-    "currency": "ARS"
+    "currency": "USD"
 };
 
 const options = {
@@ -128,7 +126,7 @@ curl -X POST {{baseUrl}}/business/virtual-account/create?customer_id={{customerI
 -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9" \
 -d '{
     "customer_id": "123e4567-e89b-12d3-a456-426614174000",
-    "currency": "ARS"
+    "currency": "USD"
 }'
 
 ```
@@ -169,7 +167,4 @@ In case of errors, the response will include an appropriate status code and an e
 
 **Additional Notes**
 
-* Ensure that the provided document ID and type are accurate and valid.
-* The currency parameter is required (ARS).
-
-This documentation should guide developers on how to effectively utilize the Create Argentina Virtual Account endpoint to create virtual accounts for customers in Argentina.
+* The currency parameter is required (USD).
