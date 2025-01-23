@@ -4,7 +4,7 @@
 
 **Overview**
 
-The Create Virtual Account endpoint allows you to create a virtual account for a customer. This account enables your customer to receive USD deposits via ACH or FEDWIRE. Third party deposits are also supported, but we may ask for more information. To create a USD Virtual account, you need to provide the Customer ID and currency to USD in the POST Request.
+The Create Virtual Account endpoint allows you to create a virtual account for a customer with complete and approved [KYC](../../../compliance/verification/) profile. This account enables your customer to receive USD deposits via ACH or FEDWIRE. Third party deposits are also supported, but we may ask for more information. To create a USD Virtual account, you need to provide the Customer ID and currency to USD in the POST Request.
 
 **Endpoint**
 

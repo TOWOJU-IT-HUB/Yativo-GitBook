@@ -75,7 +75,7 @@
   * [Create VIrtual Accounts](payments/virtual-accounts/create-virtual-accounts/README.md)
     * [USD Virtual Account](payments/virtual-accounts/create-virtual-accounts/argentina-virtual-account.md)
     * [Mexico Virtual Account](payments/virtual-accounts/create-virtual-accounts/mxn-virtual-account.md)
-    * [Brazil Virtual Account](payments/virtual-accounts/create-virtual-accounts/brazil-virtual-account.md)
+    * [Brazil PIX QR](payments/virtual-accounts/create-virtual-accounts/brazil-virtual-account.md)
   * [Create Multiple Virtual Accounts](payments/virtual-accounts/create-multiple-virtual-accounts/README.md)
     * [Argentina Virtual Account](payments/virtual-accounts/create-multiple-virtual-accounts/argentina-virtual-account.md)
     * [Mexico Virtual Account](payments/virtual-accounts/create-multiple-virtual-accounts/mxn-virtual-account.md)

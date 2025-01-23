@@ -4,7 +4,7 @@
 
 **Overview**
 
-This document provides guidelines for creating a virtual account for Mexican residents or non-residents. Virtual accounts facilitate seamless financial transactions and can be tailored to specific customer needs.
+This document provides guidelines for creating a virtual account for Mexican residents or non-residents with a completed and approved [KYC](../../../compliance/verification/) profile. Virtual accounts facilitate seamless financial transactions and can be tailored to specific customer needs.
 
 **Endpoint**
 
