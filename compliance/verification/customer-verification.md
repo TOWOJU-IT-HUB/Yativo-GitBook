@@ -4,6 +4,8 @@
 
 The Yativo Business API provides a robust solution for verifying the identity of your end-users/customers. This API allows businesses to ensure compliance with KYC (Know Your Customer) regulations by validating user information in real-time.
 
+The KYC can be completed via API or a verification link will be sent to the End-user/customer via email.
+
 #### 2. Authentication
 
 All API requests must be authenticated using an API key. You can obtain your API key from the Yativo Business API dashboard. Include this key in the header of your requests as follows:
