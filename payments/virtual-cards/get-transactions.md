@@ -124,6 +124,6 @@ By following the above details, you can retrieve the transaction history for a s
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/virtual/cards/transactions/{cardId}" method="get" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/customer/virtual/cards/transactions/{cardId}" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}

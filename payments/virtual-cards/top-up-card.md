@@ -117,6 +117,6 @@ By following the above details, you can successfully top up a virtual card for a
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/virtual/cards/topup" method="post" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/customer/virtual/cards/topup" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}

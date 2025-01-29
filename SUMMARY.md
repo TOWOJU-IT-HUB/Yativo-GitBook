@@ -18,6 +18,7 @@
 
 * [Security](security-and-authentication/security.md)
 * [Authentication](security-and-authentication/authentication.md)
+* [Idempotency in API Requests](security-and-authentication/idempotency-in-api-requests.md)
 
 ## Environment
 

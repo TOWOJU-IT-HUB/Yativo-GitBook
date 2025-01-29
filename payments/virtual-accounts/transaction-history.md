@@ -106,6 +106,6 @@ curl -X GET {{baseUrl}}/business/virtual-account/history/{{accountNumber}} \
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/virtual-account/history/{accountNumber}" method="post" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/business/virtual-account/history/{accountNumber}" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}

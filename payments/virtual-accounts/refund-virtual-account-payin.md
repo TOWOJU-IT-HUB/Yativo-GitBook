@@ -25,6 +25,6 @@ The `/business/virtual-account/refundPayin/:id` endpoint allows businesses to re
 | `Authorization` | `string` | Yes      | Bearer token for authenticating the API request. |
 | `Content-Type`  | `string` | Yes      | `application/json`                               |
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/virtual-account/refundPayin/{externalId}" method="post" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/business/virtual-account/refundPayin/{externalId}" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}

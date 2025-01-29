@@ -227,6 +227,3 @@ fetch(url, options)
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer" method="post" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
-{% endswagger %}

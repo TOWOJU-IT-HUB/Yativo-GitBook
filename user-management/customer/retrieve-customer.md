@@ -145,6 +145,6 @@ curl_close($curl);
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/fb942a7e-40ce-4a5e-90f7-089c6d53de8d" method="get" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/customer/fb942a7e-40ce-4a5e-90f7-089c6d53de8d" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}

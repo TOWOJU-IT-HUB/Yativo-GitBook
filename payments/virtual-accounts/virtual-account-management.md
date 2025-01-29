@@ -19,8 +19,8 @@ This endpoint allows you to fetch all virtual accounts
 
 
 
-{% swagger src="../../.gitbook/assets/Updated_Zee_v3_OpenAPI.yaml" path="/business/virtual-account" method="get" %}
-[Updated_Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Updated_Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/business/virtual-account" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
 ### Fetch Virtual Account
@@ -42,8 +42,8 @@ This endpoint allows you to fetch a particular virtual account, effectively mark
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/virtual-account/show/{account_id}" method="get" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/business/virtual-account/show/{account_id}" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
 ### Delete Virtual Account
@@ -97,8 +97,8 @@ Content-Type: application/json
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/virtual-account/delete-virtual-account/{account_id}" method="delete" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/business/virtual-account/delete-virtual-account/{account_id}" method="delete" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
 ### Enable Virtual Account
@@ -154,8 +154,8 @@ Content-Type: application/json
 
 ```
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/virtual/cards/activate" method="post" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/customer/virtual/cards/activate" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}
 
 ### Disable Virtual Account

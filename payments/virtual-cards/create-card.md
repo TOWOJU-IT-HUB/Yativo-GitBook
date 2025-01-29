@@ -108,6 +108,6 @@ By following the above details, you can successfully create a new virtual card f
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/virtual/cards/create" method="post" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/customer/virtual/cards/create" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}

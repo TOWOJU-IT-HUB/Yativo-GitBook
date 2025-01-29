@@ -115,6 +115,6 @@ fetch(url, options)
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/crypto/get-wallets" method="get" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/crypto/get-wallets" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}

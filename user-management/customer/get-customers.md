@@ -161,6 +161,6 @@ echo $response;
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer" method="get" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/customer" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}

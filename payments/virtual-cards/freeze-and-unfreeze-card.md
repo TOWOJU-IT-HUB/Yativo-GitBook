@@ -111,6 +111,6 @@ By following the above details, you can successfully freeze or unfreeze a virtua
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/customer/virtual/cards/update/{cardId}" method="put" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/customer/virtual/cards/update/{cardId}" method="put" %}
+[Broken link](broken-reference)
 {% endswagger %}

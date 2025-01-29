@@ -123,7 +123,7 @@ curl -X GET https://api.yativo.com/api/v1/virtual-accounts/123456789ef/status \
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/virtual-account/show/{account_id}" method="get" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/business/virtual-account/show/{account_id}" method="get" %}
+[Broken link](broken-reference)
 {% endswagger %}
 

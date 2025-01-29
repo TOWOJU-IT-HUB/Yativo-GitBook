@@ -26,47 +26,57 @@ Authorization: Bearer YOUR_API_KEY
 
 **Request Parameters:**
 
-<table><thead><tr><th width="189">Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>first_name</code></td><td>string</td><td>Yes</td><td>The customer's first name.</td></tr><tr><td><code>last_name</code></td><td>string</td><td>Yes</td><td>The customer's last name.</td></tr><tr><td><code>middle_name</code></td><td>string</td><td>No</td><td>The customer's middle name.</td></tr><tr><td><code>email</code></td><td>string</td><td>No</td><td>The customer's email address.</td></tr><tr><td><code>phone</code></td><td>string</td><td>No</td><td>The customer's phone number.</td></tr><tr><td><code>date_of_birth</code></td><td>string</td><td>Yes</td><td>The customer's date of birth (YYYY-MM-DD).</td></tr><tr><td><code>ip_address</code></td><td>string</td><td>No</td><td>The customer's IP address.</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td><code>first_name</code></td><td>string</td><td>Yes</td><td>The customer's first name.</td></tr><tr><td><code>last_name</code></td><td>string</td><td>Yes</td><td>The customer's last name.</td></tr><tr><td><code>middle_name</code></td><td>string</td><td>No</td><td>The customer's middle name.</td></tr><tr><td><code>email</code></td><td>string</td><td>No</td><td>The customer's email address.</td></tr><tr><td><code>phone</code></td><td>string</td><td>No</td><td>The customer's phone number.</td></tr><tr><td><code>date_of_birth</code> / <code>birth_date</code></td><td>string</td><td>Yes</td><td>The customer's date of birth (YYYY-MM-DD).</td></tr><tr><td><code>ip_address</code></td><td>string</td><td>No</td><td>The customer's IP address.</td></tr><tr><td><code>type</code></td><td>string</td><td>Yes</td><td>The type of customer (e.g., "individual").</td></tr><tr><td><code>address.street_line_1</code></td><td>string</td><td>Yes</td><td>The first line of the customer's address.</td></tr><tr><td><code>address.city</code></td><td>string</td><td>Yes</td><td>The city of the customer's address.</td></tr><tr><td><code>address.state</code></td><td>string</td><td>No*</td><td>The state/province (ISO 3166-2 code). Required if the country has subdivisions.</td></tr><tr><td><code>address.postal_code</code></td><td>string</td><td>Yes</td><td>The postal/ZIP code of the customer's address.</td></tr><tr><td><code>address.country</code></td><td>string (ISO 3166-1)</td><td>Yes</td><td>The country code (e.g., "USA" for America, "NGA" for Nigeria).</td></tr><tr><td><code>nationality</code></td><td>string (ISO 3166-1)</td><td>Yes</td><td>The customer's nationality (e.g., "USA", "NGA").</td></tr><tr><td><code>signed_agreement_id</code></td><td>string (UUID)</td><td>Yes</td><td>The ID of the signed agreement.</td></tr><tr><td><code>employment_status</code></td><td>string</td><td>Yes</td><td>The customer's employment status (e.g., "employed", "self_employed", "unemployed").</td></tr><tr><td><code>expected_monthly_payments</code></td><td>string (range)</td><td>Yes</td><td>Expected monthly payments (e.g., "5000_9999").</td></tr><tr><td><code>acting_as_intermediary</code></td><td>string ("yes" / "no")</td><td>Yes</td><td>Whether the customer is acting as an intermediary.</td></tr><tr><td><code>most_recent_occupation</code></td><td>string (code)</td><td>Yes</td><td>The customer's most recent occupation (use an API endpoint for supported codes).</td></tr><tr><td><code>account_purpose</code></td><td>string</td><td>Yes</td><td>The purpose of the account (e.g., "purchase_goods_and_services").</td></tr><tr><td><code>account_purpose_other</code></td><td>string / null</td><td>No</td><td>Required if <code>account_purpose</code> includes "other".</td></tr><tr><td><code>source_of_funds</code></td><td>string</td><td>Yes</td><td>Source of funds (e.g., "salary", "savings", "investments_loans").</td></tr><tr><td><code>identifying_information</code></td><td>array of objects</td><td>Yes*</td><td>Required if customer is from the USA. Contains identity details.</td></tr><tr><td><code>identifying_information[].type</code></td><td>string</td><td>Yes</td><td>The type of identification (e.g., "ssn", "drivers_license").</td></tr><tr><td><code>identifying_information[].issuing_country</code></td><td>string (ISO 3166-1)</td><td>Yes</td><td>The issuing country for the ID.</td></tr><tr><td><code>identifying_information[].number</code></td><td>string</td><td>Yes</td><td>The identification number.</td></tr><tr><td><code>identifying_information[].image_front</code></td><td>string (Base64)</td><td>No</td><td>Base64-encoded image of the front of the document (if applicable).</td></tr><tr><td><code>identifying_information[].image_back</code></td><td>string (Base64)</td><td>No</td><td>Base64-encoded image of the back of the document (if applicable).</td></tr><tr><td><code>documents</code></td><td>array of objects</td><td>No</td><td>Additional documentation provided.</td></tr><tr><td><code>documents[].purposes</code></td><td>array of strings</td><td>Yes</td><td>The purpose of the document (e.g., "proof_of_address").</td></tr><tr><td><code>documents[].file</code></td><td>string (Base64)</td><td>Yes</td><td>Base64-encoded document file.</td></tr></tbody></table>
 
+{% code fullWidth="true" %}
 ```json
-//Example request
 {
+    "type": "individual",
     "first_name": "John",
-    "customer_id": "f66b8549-97a9-48f4-aee7-e546e4859ad8",
     "last_name": "Doe",
-    "middle_name": "Smith",
-    "email": "john.doe@example.com",
-    "phone": "+1234567890",
-    "dob": "1980-01-01",
-    "longitude":  "99.90",
-    "latitude": "34.533",
-    "gender": "Male",
-    "mobile": "+1234567890",
-    "street": "123 Main Street",
-    "landmark": "Near City Park",
-    "lga": "Central Business District",
-    "state": "TX", // ISO 3166-2 subdivision code. Must be supplied if the country has subdivisions.
-    "postal_code": "90011",
-    "country": "USA", // Three-letter alpha-3 country code as defined in the ISO 3166-1 spec.
-    "date_of_birth": "1980-01-01",
-    "ip_address": "192.168.1.1",
-    "idNumber": "A10200086",
-    "selfieimage": "https://alphamead.lon1.digitaloceanspaces.com/1fa13101-7aad-4c0b-a3ae-4d85bf2b2864/6737740256106_JPEG_20241115_171650_7855778370240702059.jpg",
-    "photoidimage": "https://alphamead.lon1.digitaloceanspaces.com/1fa13101-7aad-4c0b-a3ae-4d85bf2b2864/6737740256106_JPEG_20241115_171650_7855778370240702059.jpg",
-    "imageFrontSide": "https://alphamead.lon1.digitaloceanspaces.com/1fa13101-7aad-4c0b-a3ae-4d85bf2b2864/6737740256106_JPEG_20241115_171650_7855778370240702059.jpg",
-    "imageBackSide": "https://alphamead.lon1.digitaloceanspaces.com/1fa13101-7aad-4c0b-a3ae-4d85bf2b2864/6737740256106_JPEG_20241115_171650_7855778370240702059.jpg",
-    "proof_of_address_document": "https://alphamead.lon1.digitaloceanspaces.com/1fa13101-7aad-4c0b-a3ae-4d85bf2b2864/6737740256106_JPEG_20241115_171650_7855778370240702059.jpg",
-    "tax_identification_number": "75-1234567",
-    "employment_status": "employed",
-    "expected_monthly_payments": "xoxo",
-    "most_recent_occupation": "xoxo",
-    "primary_purpose": "xoxo",
-    "primary_purpose_other": "xoxo",
-    "source_of_funds": "xoxo",
-    "gov_id_country": "xoxo",
-    "gov_id_type": "xoxo"
+    "email": "email@example.com",
+    "address": {
+        "street_line_1": "123 Main St",
+        "city": "New York City",
+        "state": "FC", // ISO 3166-2 subdivision code. Must be supplied if the country has subdivisions.
+        "postal_code": "10001",
+        "country": "USA" // ISO 3166-1. Example: USA - America, NGA - Nigeria
+    },
+    "nationality": "USA", // ISO 3166-1. Example: USA, NGA
+    "birth_date": "2007-01-01",
+    "signed_agreement_id": "d536a227-06d3-4de1-acd3-8b5131730480",
+    "employment_status": "employed", // employed, homemaker, retired, self_employed, student, unemployed
+    "expected_monthly_payments": "5000_9999", // 0_4999, 5000_9999, 10000_49999, 50000_plus
+    "acting_as_intermediary": "no",
+    "most_recent_occupation": "291291", // call the endpoint for list of supported codes
+    "account_purpose": "purchase_goods_and_services", // charitable_donations, investment_purposes, other, payments_to_friends_or_family_abroad, personal_or_living_expenses, protect_wealth, purchase_goods_and_services, receive_payment_for_freelancing, receive_salary, ecommerce_retail_payments, investment_purposes
+    "account_purpose_other": null, // Required if account_purpose includes other.
+    "source_of_funds": "salary",  // salary,savings,investments_loans,inheritance,sale_of_assets_real_estate,pension_retirement,gifts,government_benefits,gambling_proceeds,someone_elses_funds,company_funds,amazon_ecommerce_reseller
+    "identifying_information": [
+        {
+            "type": "ssn", // required if customer is from USA
+            "issuing_country": "usa",
+            "number": "xxx-xx-xxxx"
+        },
+        {
+            "type": "drivers_license",
+            "issuing_country": "usa",
+            "number": "xxxxxxxxxxxxx",
+            "image_front": "data:image/jpg;base64,...",
+            "image_back": "data:image/jpg;base64,..."
+        }
+    ],
+    "documents": [ // Additional documentation.
+        {
+            "purposes": [
+                "proof_of_address"
+            ],
+            "file": "data:image/jpg;base64,..."
+        }
+    ]
 }
 ```
+{% endcode %}
 
 #### 4. Error Codes
 
@@ -81,15 +91,5 @@ The API uses standard HTTP status codes to indicate the success or failure of an
 | 404         | Not found. The requested resource could not be found.       |
 | 500         | Internal server error. An error occurred on the server.     |
 
-#### 5. Best Practices
-
-* **Secure Your API Key:** Never expose your API key in public repositories or client-side code.
-* **Validate Input:** Ensure all required fields are provided and valid before making API requests.
-* **Handle Errors Gracefully:** Implement error handling in your application to manage different HTTP status codes and error responses.
-* **Rate Limiting:** Be mindful of the API rate limits and avoid making excessive requests in a short period.
 
 
-
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/verification/verify-customer" method="post" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
-{% endswagger %}

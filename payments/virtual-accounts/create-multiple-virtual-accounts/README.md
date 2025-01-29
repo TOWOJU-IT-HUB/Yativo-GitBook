@@ -115,6 +115,6 @@ print_r($responseData);
 {% endtab %}
 {% endtabs %}
 
-{% swagger src="../../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/business/virtual-account/bulk-account-creation" method="post" %}
-[Zee_v3_OpenAPI.yaml](../../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/business/virtual-account/bulk-account-creation" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}

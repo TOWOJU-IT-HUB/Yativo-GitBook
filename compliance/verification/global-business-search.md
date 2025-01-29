@@ -138,6 +138,6 @@ fetch(url, {
 
 
 
-{% swagger src="../../.gitbook/assets/Zee_v3_OpenAPI.yaml" path="/verification/business-search" method="post" %}
-[Zee_v3_OpenAPI.yaml](../../.gitbook/assets/Zee_v3_OpenAPI.yaml)
+{% swagger src="broken-reference" path="/verification/business-search" method="post" %}
+[Broken link](broken-reference)
 {% endswagger %}
