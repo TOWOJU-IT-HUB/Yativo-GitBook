@@ -31,7 +31,8 @@
 ## Compliance
 
 * [Verification](compliance/verification/README.md)
-  * [Customer Verification](compliance/verification/customer-verification.md)
+  * [KYC](compliance/verification/kyc.md)
+  * [KYB](compliance/verification/kyb.md)
   * [Global Business Search](compliance/verification/global-business-search.md)
 * [Supported Jurisdiction](compliance/supported-jurisdiction.md)
 * [Supported Countries, Currencies and Payment Method](compliance/supported-countries-currencies-and-payment-method.md)
