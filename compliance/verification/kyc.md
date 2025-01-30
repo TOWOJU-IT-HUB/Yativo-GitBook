@@ -43,51 +43,106 @@ Authorization: Bearer YOUR_API_KEY
 {% code fullWidth="true" %}
 ```json
 {
-    "type": "individual",
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "email@example.com",
+    "customer_id": "4026f9ef-567f-4e91-97eb-9d5e4246d922",
+    "type": "business",
+    "primary_website": "https://google.com", // required if nature_of_business is not provided
+    // "nature_of_business": "data:image/jpeg;base64,",
     "address": {
         "street_line_1": "123 Main St",
         "city": "New York City",
         "state": "FC", // ISO 3166-2 subdivision code. Must be supplied if the country has subdivisions.
-        "postal_code": "10001",
-        "country": "USA" // ISO 3166-1. Example: USA - America, NGA - Nigeria
+        "postal_code": "900901",
+        "country": "NGA" // ISO 3166-1. Example: USA - America, NGA - Nigeria
     },
-    "nationality": "USA", // ISO 3166-1. Example: USA, NGA
-    "birth_date": "2007-01-01",
-    "employment_status": "employed", // employed, homemaker, retired, self_employed, student, unemployed
-    "expected_monthly_payments": "5000_9999", // 0_4999, 5000_9999, 10000_49999, 50000_plus
-    "acting_as_intermediary": "no",
-    "most_recent_occupation": "291291", // call the endpoint for list of supported codes
-    "account_purpose": "purchase_goods_and_services", // charitable_donations, investment_purposes, other, payments_to_friends_or_family_abroad, personal_or_living_expenses, protect_wealth, purchase_goods_and_services, receive_payment_for_freelancing, receive_salary, ecommerce_retail_payments, investment_purposes
-    "account_purpose_other": null, // Required if account_purpose includes other.
-    "source_of_funds": "salary",  // salary,savings,investments_loans,inheritance,sale_of_assets_real_estate,pension_retirement,gifts,government_benefits,gambling_proceeds,someone_elses_funds,company_funds,amazon_ecommerce_reseller
-    "identifying_information": [
+    "business_type": "corporation",
+    "business_industry": "1153",
+    "compliance_screening_explanation": "A business",
+    "description": "A business",
+    "email": "team@business.co",
+    "formation_document": "data:image/jpeg;base64,",
+    "is_dao": false,
+    "is_high_risk": false,
+    "name": "My Business",
+    "source_of_funds_description": "Minima aperiam cum aut.",
+    "ownership_document": "data:image/jpeg;base64,",
+    "service_usage_description": "A business",
+    "signed_agreement_id": "7262662f-6622-46d1-9ac1-0e840d78598f",
+    "sof_eu_questionnaire": {
+        "estimated_annual_revenue_usd": "250000000_plus",
+        "expected_monthly_payments_usd": 101307,
+        "operates_in_prohibited_countries": "no",
+        "primary_purpose": "receive_payments_for_goods_and_services",
+        "primary_purpose_other": null,
+        "high_risk_activities": [
+            "none_of_the_above"
+        ],
+        "source_of_funds": "business_loans",
+        "source_of_funds_description": "Minima aperiam cum aut.",
+        "transmits_customer_funds": "yes",
+        "transmits_customer_funds_description": "Ut similique dolores quo."
+    },
+    "statement_of_funds": "data:image/jpeg;base64,",
+    "tax_identification_number": "xxx-xx-xxxx",
+    "ultimate_beneficial_owners": [
         {
-            "type": "ssn", // required if customer is from USA
-            "issuing_country": "usa",
-            "number": "xxx-xx-xxxx"
+            "first_name": "John",
+            "middle_name": "Smith",
+            "last_name": "Doe",
+            "birth_date": "1990-01-01",
+            "email": "john.doe@gmail.com",
+            "phone": "1234567890",
+            "tax_identification_number": "123456789",
+            "address": {
+                "street_line_1": "1482 Brock Walk",
+                "street_line_2": "Suite 927",
+                "city": "Lake Shirley",
+                "state": null,
+                "postal_code": null,
+                "country": "BVT"
+            },
+            "has_ownership": true,
+            "has_control": true,
+            "is_signer": true,
+            "title": "CEO",
+            "relationship_established_at": "2015-01-01",
+            "gov_id_image_front": "data:image/jpeg;base64,",
+            "gov_id_image_back": "data:image/jpeg;base64,",
+            "proof_of_address_document": "data:image/jpeg;base64,"
         },
         {
-            "type": "drivers_license",
-            "issuing_country": "usa",
-            "number": "xxxxxxxxxxxxx",
-            "image_front": "data:image/jpg;base64,...",
-            "image_back": "data:image/jpg;base64,..."
-        }
-    ],
-    "documents": [ // Additional documentation.
-        {
-            "purposes": [
-                "proof_of_address"
-            ],
-            "file": "data:image/jpg;base64,..."
+            "first_name": "John",
+            "middle_name": "jane",
+            "last_name": "Smith",
+            "birth_date": "1990-01-01",
+            "email": "john.smith@gmail.com",
+            "phone": "1234567891",
+            "tax_identification_number": "123456784",
+            "address": {
+                "street_line_1": "1482 Brock Walk",
+                "street_line_2": "Suite 927",
+                "city": "Lake Shirley",
+                "state": null,
+                "postal_code": null,
+                "country": "BVT"
+            },
+            "has_ownership": true,
+            "has_control": true,
+            "is_signer": false,
+            "title": "CCO",
+            "relationship_established_at": "2015-01-01",
+            "gov_id_image_front": "data:image/jpeg;base64,",
+            "gov_id_image_back": "data:image/jpeg;base64,",
+            "proof_of_address_document": "data:image/jpeg;base64,"
         }
     ]
 }
+
 ```
 {% endcode %}
+
+**Get occupation codes**
+
+**GET**  \{{base\_url\}}/occupation-codes
 
 #### 4. Error Codes
 

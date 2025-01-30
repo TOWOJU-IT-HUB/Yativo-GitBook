@@ -86,69 +86,106 @@ Content-Type: application/json
 
 ```json
 {
+    "customer_id": "4026f9ef-567f-4e91-97eb-9d5e4246d922",
     "type": "business",
-    "registered_address": {
+    "primary_website": "https://google.com", // required if nature_of_business is not provided
+    // "nature_of_business": "data:image/jpeg;base64,",
+    "address": {
         "street_line_1": "123 Main St",
         "city": "New York City",
-        "subdivision": "New York",
-        "postal_code": "10001",
-        "country": "USA"
+        "state": "FC", // ISO 3166-2 subdivision code. Must be supplied if the country has subdivisions.
+        "postal_code": "900901",
+        "country": "NGA" // ISO 3166-1. Example: USA - America, NGA - Nigeria
     },
     "business_type": "corporation",
     "business_industry": "1153",
-    "compliance_screening_explanation": "Business compliance screening details",
-    "business_description": "A business",
+    "compliance_screening_explanation": "A business",
+    "description": "A business",
     "email": "team@business.co",
+    "formation_document": "data:image/jpeg;base64,",
     "is_dao": false,
     "is_high_risk": false,
-    "business_legal_name": "My Business",
-    "has_material_intermediary_ownership": false,
-    "service_usage_description": "Service usage details",
-    "estimated_annual_revenue_usd": "250000000_plus",
-    "expected_monthly_payments_usd": 101307,
-    "operates_in_prohibited_countries": "no",
-    "account_purpose": "receive_payments_for_goods_and_services",
-    "account_purpose_other": null,
-    "high_risk_activities": [
-        "none_of_the_above"
-    ],
-    "source_of_funds": "business_loans",
+    "name": "My Business",
     "source_of_funds_description": "Minima aperiam cum aut.",
-    "conducts_money_services": true,
-    "conducts_money_services_using_bridge": true,
-    "identifying_information": [
-        {
-            "type": "ein",
-            "issuing_country": "usa",
-            "number": "xxx-xx-xxxx"
-        }
-    ],
-    "documents": [
-        {
-            "purposes": ["statement_of_funds"],
-            "file": "data:image/jpg;base64,..."
-        }
-    ],
+    "ownership_document": "data:image/jpeg;base64,",
+    "service_usage_description": "A business",
+    "signed_agreement_id": "7262662f-6622-46d1-9ac1-0e840d78598f",
+    "sof_eu_questionnaire": {
+        "estimated_annual_revenue_usd": "250000000_plus",
+        "expected_monthly_payments_usd": 101307,
+        "operates_in_prohibited_countries": "no",
+        "primary_purpose": "receive_payments_for_goods_and_services",
+        "primary_purpose_other": null,
+        "high_risk_activities": [
+            "none_of_the_above"
+        ],
+        "source_of_funds": "business_loans",
+        "source_of_funds_description": "Minima aperiam cum aut.",
+        "transmits_customer_funds": "yes",
+        "transmits_customer_funds_description": "Ut similique dolores quo."
+    },
+    "statement_of_funds": "data:image/jpeg;base64,",
+    "tax_identification_number": "xxx-xx-xxxx",
     "ultimate_beneficial_owners": [
         {
             "first_name": "John",
+            "middle_name": "Smith",
             "last_name": "Doe",
             "birth_date": "1990-01-01",
             "email": "john.doe@gmail.com",
             "phone": "1234567890",
-            "identifying_information": [
-                {
-                    "type": "ssn",
-                    "issuing_country": "usa",
-                    "number": "xxx-xx-xxxx"
-                }
-            ]
+            "tax_identification_number": "123456789",
+            "address": {
+                "street_line_1": "1482 Brock Walk",
+                "street_line_2": "Suite 927",
+                "city": "Lake Shirley",
+                "state": null,
+                "postal_code": null,
+                "country": "BVT"
+            },
+            "has_ownership": true,
+            "has_control": true,
+            "is_signer": true,
+            "title": "CEO",
+            "relationship_established_at": "2015-01-01",
+            "gov_id_image_front": "data:image/jpeg;base64,",
+            "gov_id_image_back": "data:image/jpeg;base64,",
+            "proof_of_address_document": "data:image/jpeg;base64,"
+        },
+        {
+            "first_name": "John",
+            "middle_name": "jane",
+            "last_name": "Smith",
+            "birth_date": "1990-01-01",
+            "email": "john.smith@gmail.com",
+            "phone": "1234567891",
+            "tax_identification_number": "123456784",
+            "address": {
+                "street_line_1": "1482 Brock Walk",
+                "street_line_2": "Suite 927",
+                "city": "Lake Shirley",
+                "state": null,
+                "postal_code": null,
+                "country": "BVT"
+            },
+            "has_ownership": true,
+            "has_control": true,
+            "is_signer": false,
+            "title": "CCO",
+            "relationship_established_at": "2015-01-01",
+            "gov_id_image_front": "data:image/jpeg;base64,",
+            "gov_id_image_back": "data:image/jpeg;base64,",
+            "proof_of_address_document": "data:image/jpeg;base64,"
         }
     ]
 }
 ```
 
 ***
+
+**Get occupation codes**
+
+**GET**  \{{base\_url\}}/occupation-codes
 
 ### 4. Error Codes
 
