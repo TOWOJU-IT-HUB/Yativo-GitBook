@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Update customer data
 
 #### Update Customer Endpoint - Yativo

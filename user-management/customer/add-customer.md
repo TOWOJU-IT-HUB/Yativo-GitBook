@@ -33,12 +33,11 @@ The <mark style="color:green;">`POST`</mark> `{{baseUrl}}/customer`  endpoint is
 {% tab title="Request body" %}
 ```json
 {
-    "customer_name": "Emmanuel A Towoju",
-    "customer_email": "tbash7676@gmail.com",
-    "customer_phone": "+2349039395114",
+    "customer_name": "John Doe",
+    "customer_email": "john.doe@gmail.com",
+    "customer_phone": "+1xxxxxx",
     "customer_country": "USA",
     "customer_type": "individual", // or business, defaults to individual when not passed
-    "send_kyc_mail": true // default to true. email with URL to complete kyc will be sent to custome_email
 }
 ```
 {% endtab %}
@@ -226,4 +225,8 @@ fetch(url, options)
 {% endtabs %}
 
 
+
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/customer" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
 

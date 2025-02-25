@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Delete Customer
 
 #### DELETE Customer Endpoint - Yativo

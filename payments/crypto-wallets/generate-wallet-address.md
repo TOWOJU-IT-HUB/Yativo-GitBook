@@ -115,6 +115,10 @@ fetch(url, options)
 
 
 
-{% swagger src="broken-reference" path="/crypto/create-wallet" method="post" %}
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/crypto/create-wallet" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
+{% openapi src="broken-reference" path="/crypto/create-wallet" method="post" %}
 [Broken link](broken-reference)
-{% endswagger %}
+{% endopenapi %}

@@ -145,6 +145,10 @@ curl_close($curl);
 
 
 
-{% swagger src="broken-reference" path="/customer/fb942a7e-40ce-4a5e-90f7-089c6d53de8d" method="get" %}
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/customer/fb942a7e-40ce-4a5e-90f7-089c6d53de8d" method="get" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
+{% openapi src="broken-reference" path="/customer/fb942a7e-40ce-4a5e-90f7-089c6d53de8d" method="get" %}
 [Broken link](broken-reference)
-{% endswagger %}
+{% endopenapi %}

@@ -1,14 +1,14 @@
 # Single crypto deposit history
 
-### Endpoint: `/crypto/deposit-histories/:id`
+### Endpoint: `/crypto/deposit-history/:id`
 
 #### Description
 
-The `/crypto/deposit-histories/:id` endpoint allows businesses to retrieve detailed information about a specific cryptocurrency deposit transaction. This endpoint is useful for viewing the status, amount, and other details of an individual deposit.
+The `/crypto/deposit-history/:id` endpoint allows businesses to retrieve detailed information about a specific cryptocurrency deposit transaction. This endpoint is useful for viewing the status, amount, and other details of an individual deposit.
 
 #### Request Method
 
-* `GET /crypto/deposit-histories/:id`
+* `GET /crypto/deposit-history/:id`
 
 #### Path Parameter
 
@@ -29,6 +29,10 @@ The `/crypto/deposit-histories/:id` endpoint allows businesses to retrieve detai
 
 
 
-{% swagger src="broken-reference" path="/crypto/deposit-history/{cryptoDepositId}" method="get" %}
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/crypto/deposit-history/333a25d6-c273-4b8f-8870-a79deaaaa324" method="get" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
+{% openapi src="broken-reference" path="/crypto/deposit-history/{cryptoDepositId}" method="get" %}
 [Broken link](broken-reference)
-{% endswagger %}
+{% endopenapi %}

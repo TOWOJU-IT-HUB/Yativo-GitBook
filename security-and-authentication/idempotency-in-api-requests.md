@@ -24,7 +24,7 @@ To ensure **safe retries** and prevent **duplicate operations**, our API require
 **First Attempt:**
 
 ```http
-POST /api/payments
+POST /api/some-endpoint
 Content-Type: application/json
 Idempotency-Key: 123e4567-e89b-12d3-a456-426614174000
 
@@ -40,7 +40,7 @@ Idempotency-Key: 123e4567-e89b-12d3-a456-426614174000
 **Retry with the Same Key:**
 
 ```http
-POST /api/payments
+POST /api/some-endpoint
 Content-Type: application/json
 Idempotency-Key: 123e4567-e89b-12d3-a456-426614174000
 

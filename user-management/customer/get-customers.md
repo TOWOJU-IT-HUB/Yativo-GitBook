@@ -161,6 +161,10 @@ echo $response;
 
 
 
-{% swagger src="broken-reference" path="/customer" method="get" %}
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/customer" method="get" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
+{% openapi src="broken-reference" path="/customer" method="get" %}
 [Broken link](broken-reference)
-{% endswagger %}
+{% endopenapi %}

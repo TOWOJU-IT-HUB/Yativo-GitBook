@@ -73,3 +73,8 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vM
 
 By following these steps, you can authenticate with the Yativo API and securely access its protected resources using the provided bearer token.
 
+
+
+{% openapi src="../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/auth/login" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}

@@ -6,6 +6,12 @@
 
 Make a `GET` `{{baseUrl}}/beneficiary/form/show/{{gatewayID}}`to get the _**Dynamic Form** (The form response is different for each gateway)_ for adding the beneficiary details
 
+
+
+{% openapi src="../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/beneficiary/form/show/332" method="get" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 #### Request
 
 **Headers**
@@ -145,6 +151,12 @@ this form Requires the **Beneficiary ID** _(gotten in the response when you_ [_A
 
 * **Authorization:** `Bearer YOUR_ACCESS_TOKEN`
 * **Content-Type:** `application/json`
+
+
+
+{% openapi src="../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/beneficiaries/payment-methods" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
 
 **Request Example**
 

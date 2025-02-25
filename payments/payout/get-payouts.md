@@ -16,16 +16,22 @@ layout:
 
 #### Get Payouts API Documentation
 
-**Endpoint: `GET /api/payout/get`**
+**Endpoint: `GET /wallet/payouts?page=1`**
 
 This endpoint retrieves a list of payout records for the authenticated user.
 
 **Request**
 
-* **URL**: `/api/payout/get`
+* **URL**: `/wallet/payouts`
 * **Method**: `GET`
 * **Headers**:
   * `Authorization`: Bearer {token}
+
+
+
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/wallet/payouts" method="get" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
 
 **Success Response**
 

@@ -1,8 +1,12 @@
+---
+hidden: true
+---
+
 # Batch Payout
 
 #### Batch Payouts API Documentation
 
-**Endpoint: `POST`**` ``{{baseUrl}}/payout/batch`
+**Endpoint: `POST`**` `` ``{{baseUrl}}/payout/batch `
 
 This endpoint processes batch payout requests. It validates the input data, checks if beneficiaries and their payment methods exist, creates withdrawal records, and processes payouts using a payment service.
 

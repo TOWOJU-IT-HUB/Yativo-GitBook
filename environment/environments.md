@@ -14,4 +14,4 @@ The Yativo test sandbox allows you simulate yativo functions in a sandbox enviro
 
 **Test base url**
 
-[https://sandbox.yativo.com/](https://sandbox.yativo.com/)
+[https://smtp.yativo.com/](https://sandbox.yativo.com/)

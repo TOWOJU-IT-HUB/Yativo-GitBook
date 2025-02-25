@@ -16,9 +16,13 @@ This API allows you to set a webhook URL where status notifications from Yativo 
 
 
 
-{% swagger src="broken-reference" path="/business/webhook" method="post" %}
+{% openapi src="../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/business/webhook" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
+{% openapi src="broken-reference" path="/business/webhook" method="post" %}
 [Broken link](broken-reference)
-{% endswagger %}
+{% endopenapi %}
 
 **Get Webhook Endpoint**
 

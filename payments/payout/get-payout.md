@@ -16,13 +16,13 @@ layout:
 
 #### Fetch Payout Details API Documentation
 
-**Endpoint: `GET /payout/fetch/{payout_id}`**
+**Endpoint: `GET /payout/{payout_id}`**
 
 This endpoint retrieves detailed information about a specific payout using its unique identifier (`payout_id`).
 
 **Request**
 
-* **URL**: `/payout/fetch/{payout_id}`
+* **URL**: `/payout/{payout_id}`
 * **Method**: `GET`
 * **Headers**:
   * `Authorization`: Bearer `{token}`
@@ -30,6 +30,12 @@ This endpoint retrieves detailed information about a specific payout using its u
 **URL Parameters**
 
 * **`payout_id`**: The unique identifier of the payout to be fetched.
+
+
+
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/wallet/payout/{payout_id}" method="get" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
 
 **Success Response**
 

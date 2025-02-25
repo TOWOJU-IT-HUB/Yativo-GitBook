@@ -12,6 +12,12 @@ The Yativo Business API provides a robust solution for verifying the identity of
 
 The KYC can be completed via API or a verification link will be sent to the End-user/customer via email.
 
+
+
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/verification/verify-customer" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 #### Supported Government ID's by Country
 
 Y = Yes (Supported) | \* (Requires backside )

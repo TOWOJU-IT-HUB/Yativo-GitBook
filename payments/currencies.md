@@ -269,4 +269,6 @@ curl -X GET "{{baseUrl}}/currencies/all" \
 
 
 
-{% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/jOjyzXg" %}
+{% openapi src="../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/currencies/all" method="get" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}

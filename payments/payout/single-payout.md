@@ -12,15 +12,15 @@ layout:
     visible: true
 ---
 
-# Single Payout
+# Payout
 
-**Endpoint: `POST /payout/simple`**
+**Endpoint: `POST /wallet/payout`**
 
 This endpoint creates a simple payout for a specified beneficiary.
 
 **Request**
 
-* **URL**: `/payout/simple`
+* **URL**: `/wallet/payout`
 * **Method**: `POST`
 * **Headers**:
   * `Content-Type`: `application/json`
@@ -28,17 +28,17 @@ This endpoint creates a simple payout for a specified beneficiary.
 
 **Request Body**
 
-* **`beneficiary_id`**: (integer, required) The ID of the beneficiary.
-* **`amount`**: (numeric, required) The amount to be paid out.
-* **`beneficiary_details_id`**: (integer, required) The ID of the beneficiary's details.
+* **`debit_wallet`**: (string, required) Your Yativo wallet you want charged e.g USD, CLP.
+* **`amount`**: (numeric, required) The amount to be paid out in the receiver's currency.
+* **`payment_method_id`**: (integer, required) The ID of the beneficiary's payment method this id can be gotten from <mark style="color:red;">`{{base_url}}/beneficiaries/payment-methods/all.`</mark> via a <mark style="color:blue;">`GET`</mark> request
 
 **Payload Example**
 
 ```json
 {
-    "beneficiary_id": 1,
+    "debit_wallet": USD,
     "amount": 38,
-    "beneficiary_details_id": 1 
+    "payment_method_id": 1 
 }
 ```
 
@@ -53,14 +53,14 @@ This endpoint creates a simple payout for a specified beneficiary.
         "status_code": 400,
         "message": "Request failed",
         "data": {
-            "beneficiary_id": [
-                "The beneficiary id field is required."
+            "debit_wallet": [
+                "The debit wallet field is required."
             ],
             "amount": [
                 "The amount field is required."
             ],
-            "beneficiary_details_id": [
-                "The beneficiary details id field is required."
+            "payment_method_id": [
+                "The payment method id field is required."
             ]
         }
     }
@@ -137,3 +137,9 @@ This endpoint creates a simple payout for a specified beneficiary.
        * `address_line_2`: The second line of the address (can be null).
      * `created_at`: The timestamp when the beneficiary was created.
      * `updated_at`: The timestamp when the beneficiary was last updated.
+
+
+
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/wallet/payout" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}

@@ -12,6 +12,12 @@ This endpoint retrieves a list of beneficiaries associated with the authenticate
 
 * **Authorization:** `Bearer YOUR_ACCESS_TOKEN`
 
+
+
+{% openapi src="../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/beneficiaries/list" method="get" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 **Request Body**
 
 No request body is required for this endpoint.
