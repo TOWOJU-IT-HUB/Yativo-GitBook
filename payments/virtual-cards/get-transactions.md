@@ -32,6 +32,14 @@ No specific headers are required for this endpoint, but typically, you might nee
 
 The response will include the status of the request, a relevant message, and a list of transactions associated with the specified virtual card if the request is successful. If the request is invalid, an error message will be returned.
 
+
+
+
+
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/customer/virtual/cards/transactions/c9aa5757-c22d-48ca-a08b-aebdee325fde" method="get" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 #### Successful Response
 
 ```json
@@ -124,6 +132,6 @@ By following the above details, you can retrieve the transaction history for a s
 
 
 
-{% swagger src="broken-reference" path="/customer/virtual/cards/transactions/{cardId}" method="get" %}
+{% openapi src="broken-reference" path="/customer/virtual/cards/transactions/{cardId}" method="get" %}
 [Broken link](broken-reference)
-{% endswagger %}
+{% endopenapi %}

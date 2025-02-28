@@ -32,6 +32,12 @@ These fees apply to both MasterCard and Visa Virtual USD cards.
 
 No specific headers are required for this endpoint, but typically, you might need to include authorization tokens or other headers as per your API's authentication requirements.
 
+
+
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/customer/virtual/cards/topup" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 ### Request Body
 
 The request body must include the following fields:
@@ -117,6 +123,6 @@ By following the above details, you can successfully top up a virtual card for a
 
 
 
-{% swagger src="broken-reference" path="/customer/virtual/cards/topup" method="post" %}
+{% openapi src="broken-reference" path="/customer/virtual/cards/topup" method="post" %}
 [Broken link](broken-reference)
-{% endswagger %}
+{% endopenapi %}

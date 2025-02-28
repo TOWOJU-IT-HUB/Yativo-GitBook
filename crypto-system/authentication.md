@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Authentication
 
 #### Overview
@@ -22,7 +26,6 @@ Authentication is the starting point for any integration with the Yativo Crypto 
 * ```json
   {
       "email": "user@example.com",
-      "password": "secure-password"
   }
   ```
 * **Response Example:**

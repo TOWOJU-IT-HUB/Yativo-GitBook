@@ -17,6 +17,12 @@ No specific headers are required for this endpoint, but typically, you might nee
 | Content-Type  | `application/json` |
 | Authorization | `Bearer <token>`   |
 
+###
+
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/virtual/get-card/c9aa5757-c22d-48ca-a08b-aebdee325fde" method="get" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 ### Response
 
 The response will include the status of the request, relevant message, and details of the virtual card if the request is successful. If the request is invalid, an error message will be returned.
@@ -92,6 +98,6 @@ The response will include the status of the request, relevant message, and detai
 
 
 
-{% swagger src="broken-reference" path="/customer/virtual/cards/get/{cardId}" method="get" %}
+{% openapi src="broken-reference" path="/customer/virtual/cards/get/{cardId}" method="get" %}
 [Broken link](broken-reference)
-{% endswagger %}
+{% endopenapi %}

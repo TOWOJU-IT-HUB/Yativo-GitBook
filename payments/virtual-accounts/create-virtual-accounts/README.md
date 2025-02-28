@@ -17,6 +17,12 @@ Each customer can have only 1 Virtual account per currency
 | Content-Type  | `application/json` |
 | Authorization | `Bearer <token>`   |
 
+
+
+{% openapi src="../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/business/virtual-account/create" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 **Body**
 
 | Name          | Type   | Description   |
@@ -160,6 +166,6 @@ fetch(url, options)
 {% endtab %}
 {% endtabs %}
 
-{% swagger src="broken-reference" path="/business/virtual-account/create" method="post" %}
+{% openapi src="broken-reference" path="/business/virtual-account/create" method="post" %}
 [Broken link](broken-reference)
-{% endswagger %}
+{% endopenapi %}

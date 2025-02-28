@@ -19,6 +19,12 @@ This endpoint updates the details of an existing beneficiary. The `beneficiaryID
 
 * **beneficiaryID:** The ID of the beneficiary to be updated.
 
+
+
+{% openapi src="../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/beneficiaries/6" method="put" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 **Request Body**
 
 The request body should contain the fields to be updated. Here is an example of the request body with all the fields that can be updated:

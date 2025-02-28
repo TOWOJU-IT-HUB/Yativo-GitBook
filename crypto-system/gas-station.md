@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Gas Station
 
 #### Overview

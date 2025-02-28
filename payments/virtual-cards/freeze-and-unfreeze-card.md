@@ -46,6 +46,12 @@ or
 }
 ```
 
+###
+
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/customer/virtual/cards/update/c9aa5757-c22d-48ca-a08b-aebdee325fde" method="put" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 ### Response
 
 The response will include the status of the request, a relevant message, and details about the action performed if the request is successful. If there is an error, a message indicating the issue will be returned.
@@ -111,6 +117,6 @@ By following the above details, you can successfully freeze or unfreeze a virtua
 
 
 
-{% swagger src="broken-reference" path="/customer/virtual/cards/update/{cardId}" method="put" %}
+{% openapi src="broken-reference" path="/customer/virtual/cards/update/{cardId}" method="put" %}
 [Broken link](broken-reference)
-{% endswagger %}
+{% endopenapi %}

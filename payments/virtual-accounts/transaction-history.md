@@ -4,7 +4,7 @@
 
 #### Endpoint
 
-**GET** `{{baseUrl}}`/business/virtual-account/history/\{{accountNumber\}}
+**POST** `{{baseUrl}}`/business/virtual-account/history/\{{accountNumber\}}
 
 #### Description
 
@@ -26,13 +26,17 @@ This endpoint allows you to fetch the transaction history of a virtual account.
 **Example Request**
 
 ```
-GET {{baseUrl}}/business/virtual-account/history/{{accountNumber}}
+POST {{baseUrl}}/business/virtual-account/history/{{accountNumber}}
 Authorization: Bearer your_api_token
 Content-Type: application/json
 
 ```
 
 
+
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/business/virtual-account/history/{accountNumber}" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
 
 
 
@@ -106,6 +110,6 @@ curl -X GET {{baseUrl}}/business/virtual-account/history/{{accountNumber}} \
 
 
 
-{% swagger src="broken-reference" path="/business/virtual-account/history/{accountNumber}" method="post" %}
+{% openapi src="broken-reference" path="/business/virtual-account/history/{accountNumber}" method="post" %}
 [Broken link](broken-reference)
-{% endswagger %}
+{% endopenapi %}

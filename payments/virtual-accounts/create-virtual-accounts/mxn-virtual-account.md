@@ -21,7 +21,7 @@ The request body should contain the following parameters:
 
 ```json
 {
-    "customer_id": "123e4567-e89b-12d3-a456-426614174000"
+    "customer_id": "123e4567-e89b-12d3-a456-426614174000" //optional
     "currency": "MEX"
 }
 ```

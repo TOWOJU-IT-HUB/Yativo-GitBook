@@ -17,6 +17,12 @@ This endpoint archives an existing beneficiary. The `beneficiaryID` in the URL i
 * `Authorization: Bearer YOUR_ACCESS_TOKEN`
 * `Content-Type: application/json`
 
+
+
+{% openapi src="../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/beneficiaries/{beneficiary_id}/archive" method="put" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 **URL Parameters**
 
 | Parameter       | Type   | Required | Description                              |

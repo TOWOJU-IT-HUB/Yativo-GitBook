@@ -27,6 +27,12 @@ The request body must include the following fields:
 * **customer\_id**: (string) The unique identifier of the customer.
 * **amount**: (string) The initial amount to be loaded onto the virtual card.
 
+
+
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/customer/virtual/cards/create" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 #### Example Request Body
 
 ```json
@@ -108,6 +114,6 @@ By following the above details, you can successfully create a new virtual card f
 
 
 
-{% swagger src="broken-reference" path="/customer/virtual/cards/create" method="post" %}
+{% openapi src="broken-reference" path="/customer/virtual/cards/create" method="post" %}
 [Broken link](broken-reference)
-{% endswagger %}
+{% endopenapi %}

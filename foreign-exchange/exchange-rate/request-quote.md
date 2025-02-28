@@ -29,6 +29,10 @@ This endpoint retrieves the exchange rate between two specified currencies. The 
 
 
 
+{% openapi src="../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/exchange-rate" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 {% tabs %}
 {% tab title="Python" %}
 ```python
@@ -147,7 +151,5 @@ fetch(url, options)
 }
 
 ```
-
-
 
 {% embed url="https://codepen.io/Sotonye-Bob-Manuel/pen/NWZpKYv" %}

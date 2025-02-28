@@ -13,6 +13,10 @@ _**Note: To Add Payment details to the Beneficiary see**_ [_**Add beneficiary pa
 
 
 
+{% openapi src="../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml" path="/beneficiaries" method="post" %}
+[Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml](<../../../.gitbook/assets/Zee v3.postman_collectionagain.json-OpenApi3Yaml.yaml>)
+{% endopenapi %}
+
 {% tabs %}
 {% tab title="Python" %}
 ```

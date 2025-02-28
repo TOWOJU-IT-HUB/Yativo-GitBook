@@ -20,12 +20,12 @@ Users can receive payments through Brazil's local ACH network using PIX, a widel
 
 **Example Request**
 
-```
+```javascript
 POST {{baseUrl}}/business/virtual-account/create
 Content-Type: application/json
 
 {
-    "customer_id": "123e4567-e89b-12d3-a456-426614174000",
+    "customer_id": "123e4567-e89b-12d3-a456-426614174000", //optional
     "currency": "BRL"
 }
 ```

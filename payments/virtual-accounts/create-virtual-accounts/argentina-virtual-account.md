@@ -24,7 +24,7 @@ POST {{baseUrl}}/business/virtual-account/create
 Content-Type: application/json
 
 {
-    "customer_id": "123e4567-e89b-12d3-a456-426614174000",
+    "customer_id": "123e4567-e89b-12d3-a456-426614174000", //optional
     "currency": "USD"
 }
 ```
@@ -168,3 +168,4 @@ In case of errors, the response will include an appropriate status code and an e
 **Additional Notes**
 
 * The currency parameter is required (USD).
+
