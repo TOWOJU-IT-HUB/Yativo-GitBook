@@ -34,14 +34,14 @@ Content-Type: application/json
 ```
 $url = "{{baseUrl}}/business/virtual-account/create";
 $data = array(
-    "customer_id" => "123e4567-e89b-12d3-a456-426614174000",
+    "customer_id" => "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxx",
     "currency" => "USD"
 );
 $data_json = json_encode($data);
 
 $headers = array(
     'Content-Type: application/json',
-    'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+    'Authorization: Bearer eyJ0xxxxxxxxxxxxxxxxx'
 );
 
 $curl = curl_init();

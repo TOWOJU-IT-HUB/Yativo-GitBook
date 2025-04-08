@@ -76,7 +76,7 @@ $url = $baseUrl . '/example-endpoint';
 
 $data = [
     "currency": "USD", // supported are BRL, MXN,
-    "customer_id": "ae68f0ef-0e59-4a23-b8da-9e07bf2af361"
+    "customer_id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxx"
     ];
 
 $options = [

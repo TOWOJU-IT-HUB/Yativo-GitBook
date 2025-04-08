@@ -25,7 +25,7 @@ POST {{baseUrl}}/business/virtual-account/create
 Content-Type: application/json
 
 {
-    "customer_id": "123e4567-e89b-12d3-a456-426614174000", //optional
+    "customer_id": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx", //optional
     "currency": "BRL"
 }
 ```
