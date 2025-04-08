@@ -2409,22 +2409,22 @@ _POST \{{host\}}/beneficiaries/payment-methods/_
         "currency": "ARS",
         "payment_data": {
     		  "beneficiary_type": "Individual",
-    		  "beneficiary_first_name": "Louis Favour",
-    		  "beneficiary_last_name": "Chigemezu",
+    		  "beneficiary_first_name": "Lamine",
+    		  "beneficiary_last_name": "Mandela",
     		  "company_name": null,
     		  "beneficiary_email": "user@example.com", // Not provided in data
     		  "beneficiary_address": "Address not provided", // Placeholder
     		  "beneficiary_document_type": "CUIL",
-    		  "beneficiary_document_number": "20631466665", // CUIL/T 20-63146666-5 (formatted without hyphens)
+    		  "beneficiary_document_number": "20xxxxxxxxx5", // CUIL/T 20-6xxxxxxx6-5 (formatted without hyphens)
     		  "bank_code": "92", // Banco Ciudad's code
     		  "account_type_bank": "C", // Default to "Cuenta corriente"
-    		  "account_bank": "0290015510000595848657", // CBU formatted without hyphens
+    		  "account_bank": "02xxxxxxxxxxxxxx7", // CBU formatted without hyphens
     		  "fc_customer_type": "natural",
-    		  "fc_legal_name": "Louis Favour Chigemezu",
+    		  "fc_legal_name": "Lamine Mandela",
     		  "fc_document_type": "dni",
-    		  "fc_document_number": "63146666", // Last 8 digits of CUIL
+    		  "fc_document_number": "6xxxxxxx6", // Last 8 digits of CUIL
     		  "fc_legal_address": "Address not provided", // Placeholder
-    		  "fc_birthdate": "1990-01-01", // Placeholder (required field)
+    		  "fc_birthdate": "1888-01-01", // Placeholder (required field)
     		  "purpose": "EPFAMT", // "Mantenimiento familiar"
     		  "purpose_comentary": "Mantenimiento familiar"
     		}
@@ -2439,15 +2439,15 @@ _POST \{{host\}}/beneficiaries/payment-methods/_
         "nickname": "CHL acct",
         "currency": "CLP",
         "payment_data": {
-        "beneficiary_id" : "777920731",
-        "beneficiary_name" : "Zee Technologies spa",
-        "beneficiary_account" : "89512227",
+        "beneficiary_id" : "7xxxxxxx1",
+        "beneficiary_name" : "Zebra Aerospace",
+        "beneficiary_account" : "8xxxxxx7",
         "beneficiary_account_type": "2",
         "beneficiary_bank_code": "016",
-        "beneficiary_email": "michael@yativo.com",
+        "beneficiary_email": "zebra@zebra.com",
         "description": "transfer"
     }
-        //"customer_id": "d2be5158-ea3f-40ab-88e8-7c7d10fa04f4"
+        //"customer_id": "dxxxxxxx-exxx-4xxx-8xxxx-7xxxxxxx"
     }
     ```
 *   Colombia
@@ -2458,11 +2458,11 @@ _POST \{{host\}}/beneficiaries/payment-methods/_
         "nickname": "COL acct",
         "currency": "COL",
         "payment_data": {
-        "bankAccount" : "059-000073-51",
+        "bankAccount" : "0xx-0xxxxx-5x",
         "AccountType" : "2",
         "bankCode" : "007"
     }
-        //"customer_id": "d2be5158-ea3f-40ab-88e8-7c7d10fa04f4"
+        //"customer_id": "dxxxxxxx-exxx-4xxx-8xxxx-7xxxxxxx"
     }
     ```
 *   Mexico
@@ -2473,42 +2473,43 @@ _POST \{{host\}}/beneficiaries/payment-methods/_
         "nickname": "MXN acct",
         "currency": "MXN",
         "payment_data": {
-        "clabe" : "638180010192109625",
-        "beneficiary": "Carolina Rosero"
+        "clabe" : "6xxxxxxxxxxxxxxxxx",
+        "beneficiary": "Hugo Marine"
     }
-        //"customer_id": "d2be5158-ea3f-40ab-88e8-7c7d10fa04f4"
+        //"customer_id": "dxxxxxxx-exxx-4xxx-8xxxx-7xxxxxxx"
     }
     ```
 *   Peru
 
     ```json
     {
-        "gateway_id": 501,
-        "nickname": "Peru acct",
-        "currency": "PEN",
-        "payment_data": {
-        "beneficiary_first_name" : "Laureano Serafin",
-        "beneficiary_last_name" : "Rodriguez Polo",
-        "beneficiary_email" : "emma@yativo.com",
-        "beneficiary_address": "1 saint street, Lima",
+      "gateway_id": 501,
+      "nickname": "Sample Account",
+      "currency": "PEN",
+      "payment_data": {
+        "beneficiary_first_name": "John",
+        "beneficiary_last_name": "Doe",
+        "beneficiary_email": "john.doe@example.com",
+        "beneficiary_address": "123 Example Street",
         "city": "Lima",
-        "phone": "099922",
+        "phone": "0000000000",
         "beneficiary_document_type": "DNI",
-        "beneficiary_document_number": 40224529,
-        "bank_code": 265,
+        "beneficiary_document_number": 12345678,
+        "bank_code": 111,
         "account_type_bank": "c",
-        "account_bank": "00219311305166509915",
+        "account_bank": "002XXXXXXXXXXX",
         "fc_customer_type": "natural",
-        "fc_legal_name" : "Laureano Serafin Rodriguez Polo",
+        "fc_legal_name": "Jane Smith",
         "fc_document_type": "DNI",
-        "fc_document_number": 40224529,
-        "fc_legal_address": "1 saint street, Lima",
-        "fc_birthdate": "1990-02-02",
+        "fc_document_number": 87654321,
+        "fc_legal_address": "456 Another Ave",
+        "fc_birthdate": "1990-01-01",
         "purpose": "ISSCVE",
-        "purpose_comentary": "Payment"
+        "purpose_comentary": "Test Payment"
+      }
+      // "customer_id": "xxxxxxxx-xxxx-4xxx-xxxx-xxxxxxxxxxxx"
     }
-        //"customer_id": "d2be5158-ea3f-40ab-88e8-7c7d10fa04f4"
-    }
+
     ```
 
 **Response Example:**
@@ -2517,171 +2518,176 @@ _POST \{{host\}}/beneficiaries/payment-methods/_
 
     ```json
     {
-        "status": "success",
-        "status_code": 200,
-        "message": "Request successful",
+      "status": "success",
+      "status_code": 200,
+      "message": "Request successful",
+      "data": {
+        "message": "Payment data processed successfully",
         "data": {
-            "message": "Payment data processed successfully",
-            "data": {
-                "user_id": 4,
-                "currency": "ARS",
-                "gateway_id": 492,
-                "nickname": "Arg acct",
-                "address": null,
-                "payment_data": {
-                    "beneficiary_type": "Individual",
-                    "beneficiary_first_name": "Louis Favour",
-                    "beneficiary_last_name": "Chigemezu",
-                    "company_name": null,
-                    "beneficiary_email": "user@example.com",
-                    "beneficiary_address": "Address not provided",
-                    "beneficiary_document_type": "CUIL",
-                    "beneficiary_document_number": "20631466665",
-                    "bank_code": "92",
-                    "account_type_bank": "C",
-                    "account_bank": "0290015510000595848657",
-                    "fc_customer_type": "natural",
-                    "fc_legal_name": "Louis Favour Chigemezu",
-                    "fc_document_type": "dni",
-                    "fc_document_number": "63146666",
-                    "fc_legal_address": "Address not provided",
-                    "fc_birthdate": "1990-01-01",
-                    "purpose": "EPFAMT",
-                    "purpose_comentary": "Mantenimiento familiar"
-                },
-                "beneficiary_id": null,
-                "created_at": "2025-02-17T11:38:04.000000Z",
-                "id": 7
-            }
+          "user_id": 4,
+          "currency": "ARS",
+          "gateway_id": 492,
+          "nickname": "Sample Account",
+          "address": null,
+          "payment_data": {
+            "beneficiary_type": "Individual",
+            "beneficiary_first_name": "John",
+            "beneficiary_last_name": "Doe",
+            "company_name": null,
+            "beneficiary_email": "john.doe@example.com",
+            "beneficiary_address": "123 Placeholder Street",
+            "beneficiary_document_type": "CUIL",
+            "beneficiary_document_number": "20000000000",
+            "bank_code": "99",
+            "account_type_bank": "C",
+            "account_bank": "0290XXXXXXXXXXXXXXX",
+            "fc_customer_type": "natural",
+            "fc_legal_name": "Jane Smith",
+            "fc_document_type": "dni",
+            "fc_document_number": "60000000",
+            "fc_legal_address": "456 Sample Avenue",
+            "fc_birthdate": "1990-01-01",
+            "purpose": "EPFAMT",
+            "purpose_comentary": "Mantenimiento familiar"
+          },
+          "beneficiary_id": null,
+          "created_at": "2025-02-17T11:38:04.000000Z",
+          "id": 7
         }
+      }
     }
+
     ```
 *   Chile
 
     ```json
     {
-        "status": "success",
-        "status_code": 200,
-        "message": "Request successful",
+      "status": "success",
+      "status_code": 200,
+      "message": "Request successful",
+      "data": {
+        "message": "Payment data processed successfully",
         "data": {
-            "message": "Payment data processed successfully",
-            "data": {
-                "user_id": 4,
-                "currency": "CLP",
-                "gateway_id": 505,
-                "nickname": "CHL acct",
-                "address": null,
-                "payment_data": {
-                    "beneficiary_id": "777920731",
-                    "beneficiary_name": "Zee Technologies spa",
-                    "beneficiary_account": "89512227",
-                    "beneficiary_account_type": "2",
-                    "beneficiary_bank_code": "016",
-                    "beneficiary_email": "michael@yativo.com",
-                    "description": "transfer"
-                },
-                "beneficiary_id": null,
-                "created_at": "2025-02-17T13:35:19.000000Z",
-                "id": 12
-            }
+          "user_id": 4,
+          "currency": "CLP",
+          "gateway_id": 505,
+          "nickname": "Sample Account",
+          "address": null,
+          "payment_data": {
+            "beneficiary_id": "000000000",
+            "beneficiary_name": "Sample Company Ltd",
+            "beneficiary_account": "00000000",
+            "beneficiary_account_type": "2",
+            "beneficiary_bank_code": "999",
+            "beneficiary_email": "contact@example.com",
+            "description": "transfer"
+          },
+          "beneficiary_id": null,
+          "created_at": "2025-02-17T13:35:19.000000Z",
+          "id": 12
         }
+      }
     }
+
     ```
 *   Colombia
 
     ```json
     {
-        "status": "success",
-        "status_code": 200,
-        "message": "Request successful",
+      "status": "success",
+      "status_code": 200,
+      "message": "Request successful",
+      "data": {
+        "message": "Payment data processed successfully",
         "data": {
-            "message": "Payment data processed successfully",
-            "data": {
-                "user_id": 4,
-                "currency": "COP",
-                "gateway_id": 2,
-                "nickname": "COL acct",
-                "address": null,
-                "payment_data": {
-                    "bankAccount": "059-000073-51",
-                    "AccountType": "2",
-                    "bankCode": "007"
-                },
-                "beneficiary_id": null,
-                "created_at": "2025-02-17T13:22:48.000000Z",
-                "id": 11
-            }
+          "user_id": 4,
+          "currency": "COP",
+          "gateway_id": 2,
+          "nickname": "Sample Account",
+          "address": null,
+          "payment_data": {
+            "bankAccount": "000-000000-00",
+            "AccountType": "2",
+            "bankCode": "999"
+          },
+          "beneficiary_id": null,
+          "created_at": "2025-02-17T13:22:48.000000Z",
+          "id": 11
         }
+      }
     }
+
     ```
 *   Mexico
 
     ```json
     {
-        "status": "success",
-        "status_code": 200,
-        "message": "Request successful",
+      "status": "success",
+      "status_code": 200,
+      "message": "Request successful",
+      "data": {
+        "message": "Payment data processed successfully",
         "data": {
-            "message": "Payment data processed successfully",
-            "data": {
-                "user_id": 4,
-                "currency": "MXN",
-                "gateway_id": 1,
-                "nickname": "MXN acct",
-                "address": null,
-                "payment_data": {
-                    "clabe": "638180010192109625",
-                    "beneficiary": "Carolina Rosero"
-                },
-                "beneficiary_id": null,
-                "created_at": "2025-02-17T12:41:32.000000Z",
-                "id": 9
-            }
+          "user_id": 4,
+          "currency": "MXN",
+          "gateway_id": 1,
+          "nickname": "Sample Account",
+          "address": null,
+          "payment_data": {
+            "clabe": "000000000000000000",
+            "beneficiary": "Jane Doe"
+          },
+          "beneficiary_id": null,
+          "created_at": "2025-02-17T12:41:32.000000Z",
+          "id": 9
         }
+      }
     }
+
     ```
 *   Peru
 
     ```json
     {
-        "status": "success",
-        "status_code": 200,
-        "message": "Request successful",
+      "status": "success",
+      "status_code": 200,
+      "message": "Request successful",
+      "data": {
+        "message": "Payment data processed successfully",
         "data": {
-            "message": "Payment data processed successfully",
-            "data": {
-                "user_id": 4,
-                "currency": "PEN",
-                "gateway_id": 501,
-                "nickname": "Peru acct",
-                "address": null,
-                "payment_data": {
-                    "beneficiary_first_name": "Laureano Serafin",
-                    "beneficiary_last_name": "Rodriguez Polo",
-                    "beneficiary_email": "emma@yativo.com",
-                    "beneficiary_address": "1 saint street, Lima",
-                    "city": "Lima",
-                    "phone": "099922",
-                    "beneficiary_document_type": "DNI",
-                    "beneficiary_document_number": 40224529,
-                    "bank_code": 265,
-                    "account_type_bank": "c",
-                    "account_bank": "00219311305166509915",
-                    "fc_customer_type": "natural",
-                    "fc_legal_name": "Laureano Serafin Rodriguez Polo",
-                    "fc_document_type": "DNI",
-                    "fc_document_number": 40224529,
-                    "fc_legal_address": "1 saint street, Lima",
-                    "fc_birthdate": "1990-02-02",
-                    "purpose": "ISSCVE",
-                    "purpose_comentary": "Payment"
-                },
-                "beneficiary_id": null,
-                "created_at": "2025-02-17T13:06:48.000000Z",
-                "id": 10
-            }
+          "user_id": 4,
+          "currency": "PEN",
+          "gateway_id": 501,
+          "nickname": "Sample Account",
+          "address": null,
+          "payment_data": {
+            "beneficiary_first_name": "John",
+            "beneficiary_last_name": "Doe",
+            "beneficiary_email": "user@example.com",
+            "beneficiary_address": "123 Main Street, Lima",
+            "city": "Lima",
+            "phone": "000000",
+            "beneficiary_document_type": "DNI",
+            "beneficiary_document_number": 12345678,
+            "bank_code": 999,
+            "account_type_bank": "c",
+            "account_bank": "00000000000000000000",
+            "fc_customer_type": "natural",
+            "fc_legal_name": "John Doe",
+            "fc_document_type": "DNI",
+            "fc_document_number": 12345678,
+            "fc_legal_address": "123 Main Street, Lima",
+            "fc_birthdate": "1990-01-01",
+            "purpose": "ISSCVE",
+            "purpose_comentary": "Payment"
+          },
+          "beneficiary_id": null,
+          "created_at": "2025-02-17T13:06:48.000000Z",
+          "id": 10
         }
+      }
     }
+
     ```
 
 ### **Step 4: Retrieve Beneficiary Payment Details**
@@ -2694,336 +2700,145 @@ _GET \{{host\}}/beneficiaries/payment-methods/all_
 
 ```json
 {
-    "status": "success",
-    "status_code": 200,
-    "message": "Request successful",
-    "data": [
-        {
-            "id": 12,
-            "gateway_id": 505,
-            "beneficiary_id": null,
-            "nickname": "CHL acct",
-            "currency": "CLP",
-            "address": null,
-            "payment_data": {
-                "beneficiary_id": "777920731",
-                "beneficiary_name": "Zee Technologies spa",
-                "beneficiary_account": "89512227",
-                "beneficiary_account_type": "2",
-                "beneficiary_bank_code": "016",
-                "beneficiary_email": "michael@yativo.com",
-                "description": "transfer"
-            },
-            "created_at": "2025-02-17T13:35:19.000000Z",
-            "user_id": 4,
-            "bridge_id": null,
-            "bridge_customer_id": null,
-            "bridge_response": null,
-            "gateway": {
-                "id": 505,
-                "method_name": "Bank Transfer",
-                "country": "CHL",
-                "currency": "CLP",
-                "payment_method_code": null,
-                "cutoff_hrs_start": null,
-                "cutoff_hrs_end": null,
-                "base_currency": "CLP",
-                "exchange_rate_float": null
-            }
-        },
-        {
-            "id": 11,
-            "gateway_id": 2,
-            "beneficiary_id": null,
-            "nickname": "COL acct",
-            "currency": "COP",
-            "address": null,
-            "payment_data": {
-                "bankAccount": "059-000073-51",
-                "AccountType": "2",
-                "bankCode": "007"
-            },
-            "created_at": "2025-02-17T13:22:48.000000Z",
-            "user_id": 4,
-            "bridge_id": null,
-            "bridge_customer_id": null,
-            "bridge_response": null,
-            "gateway": {
-                "id": 2,
-                "method_name": "Bank Transfer",
-                "country": "COL",
-                "currency": "COP",
-                "payment_method_code": null,
-                "cutoff_hrs_start": null,
-                "cutoff_hrs_end": null,
-                "base_currency": "USD",
-                "exchange_rate_float": null
-            }
-        },
-        {
-            "id": 10,
-            "gateway_id": 501,
-            "beneficiary_id": null,
-            "nickname": "Peru acct",
-            "currency": "PEN",
-            "address": null,
-            "payment_data": {
-                "beneficiary_first_name": "Laureano Serafin",
-                "beneficiary_last_name": "Rodriguez Polo",
-                "beneficiary_email": "emma@yativo.com",
-                "beneficiary_address": "1 saint street, Lima",
-                "city": "Lima",
-                "phone": "099922",
-                "beneficiary_document_type": "DNI",
-                "beneficiary_document_number": 40224529,
-                "bank_code": 265,
-                "account_type_bank": "c",
-                "account_bank": "00219311305166509915",
-                "fc_customer_type": "natural",
-                "fc_legal_name": "Laureano Serafin Rodriguez Polo",
-                "fc_document_type": "DNI",
-                "fc_document_number": 40224529,
-                "fc_legal_address": "1 saint street, Lima",
-                "fc_birthdate": "1990-02-02",
-                "purpose": "ISSCVE",
-                "purpose_comentary": "Payment"
-            },
-            "created_at": "2025-02-17T13:06:48.000000Z",
-            "user_id": 4,
-            "bridge_id": null,
-            "bridge_customer_id": null,
-            "bridge_response": null,
-            "gateway": {
-                "id": 501,
-                "method_name": "Bank Transfer",
-                "country": "PER",
-                "currency": "PEN",
-                "payment_method_code": null,
-                "cutoff_hrs_start": null,
-                "cutoff_hrs_end": null,
-                "base_currency": "USD",
-                "exchange_rate_float": null
-            }
-        },
-        {
-            "id": 9,
-            "gateway_id": 1,
-            "beneficiary_id": null,
-            "nickname": "MXN acct",
-            "currency": "MXN",
-            "address": null,
-            "payment_data": {
-                "clabe": "638180010192109625",
-                "beneficiary": "Carolina Rosero"
-            },
-            "created_at": "2025-02-17T12:41:32.000000Z",
-            "user_id": 4,
-            "bridge_id": null,
-            "bridge_customer_id": null,
-            "bridge_response": null,
-            "gateway": {
-                "id": 1,
-                "method_name": "SPEI",
-                "country": "MEX",
-                "currency": "MXN",
-                "payment_method_code": null,
-                "cutoff_hrs_start": null,
-                "cutoff_hrs_end": null,
-                "base_currency": "USD",
-                "exchange_rate_float": null
-            }
-        },
-        {
-            "id": 8,
-            "gateway_id": 494,
-            "beneficiary_id": null,
-            "nickname": "BRA acct",
-            "currency": "BRL",
-            "address": null,
-            "payment_data": {
-                "taxId": "41901030806",
-                "pixKey": "41901030806"
-            },
-            "created_at": "2025-02-17T12:15:52.000000Z",
-            "user_id": 4,
-            "bridge_id": null,
-            "bridge_customer_id": null,
-            "bridge_response": null,
-            "gateway": {
-                "id": 494,
-                "method_name": "Pix",
-                "country": "BRA",
-                "currency": "BRL",
-                "payment_method_code": null,
-                "cutoff_hrs_start": null,
-                "cutoff_hrs_end": null,
-                "base_currency": "USD,BRL",
-                "exchange_rate_float": null
-            }
-        },
-        {
-            "id": 7,
-            "gateway_id": 492,
-            "beneficiary_id": null,
-            "nickname": "Arg acct",
-            "currency": "ARS",
-            "address": null,
-            "payment_data": {
-                "beneficiary_type": "Individual",
-                "beneficiary_first_name": "Louis Favour",
-                "beneficiary_last_name": "Chigemezu",
-                "company_name": null,
-                "beneficiary_email": "user@example.com",
-                "beneficiary_address": "Address not provided",
-                "beneficiary_document_type": "CUIL",
-                "beneficiary_document_number": "20631466665",
-                "bank_code": "92",
-                "account_type_bank": "C",
-                "account_bank": "0290015510000595848657",
-                "fc_customer_type": "natural",
-                "fc_legal_name": "Louis Favour Chigemezu",
-                "fc_document_type": "dni",
-                "fc_document_number": "63146666",
-                "fc_legal_address": "Address not provided",
-                "fc_birthdate": "1990-01-01",
-                "purpose": "EPFAMT",
-                "purpose_comentary": "Mantenimiento familiar"
-            },
-            "created_at": "2025-02-17T11:38:04.000000Z",
-            "user_id": 4,
-            "bridge_id": null,
-            "bridge_customer_id": null,
-            "bridge_response": null,
-            "gateway": {
-                "id": 492,
-                "method_name": "Bank Transfer",
-                "country": "ARG",
-                "currency": "ARS",
-                "payment_method_code": null,
-                "cutoff_hrs_start": null,
-                "cutoff_hrs_end": null,
-                "base_currency": "USD",
-                "exchange_rate_float": null
-            }
-        },
-        {
-            "id": 5,
-            "gateway_id": 492,
-            "beneficiary_id": null,
-            "nickname": "Arg acct",
-            "currency": "ARS",
-            "address": null,
-            "payment_data": {
-                "beneficiary_type": "Individual",
-                "beneficiary_first_name": "Louis Favour",
-                "beneficiary_last_name": "Chigemezu",
-                "company_name": null,
-                "beneficiary_email": "user@example.com",
-                "beneficiary_address": "Address not provided",
-                "beneficiary_document_type": "CUIL",
-                "beneficiary_document_number": "20631466665",
-                "bank_code": "92",
-                "account_type_bank": "C",
-                "account_bank": "0290015510000595848657",
-                "fc_customer_type": "natural",
-                "fc_legal_name": "Louis Favour Chigemezu",
-                "fc_document_type": "dni",
-                "fc_document_number": "63146666",
-                "fc_legal_address": "Address not provided",
-                "fc_birthdate": "1990-01-01",
-                "purpose": "EPFAMT",
-                "purpose_comentary": "Mantenimiento familiar"
-            },
-            "created_at": "2025-02-16T21:31:52.000000Z",
-            "user_id": 4,
-            "bridge_id": null,
-            "bridge_customer_id": null,
-            "bridge_response": null,
-            "gateway": {
-                "id": 492,
-                "method_name": "Bank Transfer",
-                "country": "ARG",
-                "currency": "ARS",
-                "payment_method_code": null,
-                "cutoff_hrs_start": null,
-                "cutoff_hrs_end": null,
-                "base_currency": "USD",
-                "exchange_rate_float": null
-            }
-        },
-        {
-            "id": 4,
-            "gateway_id": 333,
-            "beneficiary_id": null,
-            "nickname": "Bridge payment sample EUR",
-            "currency": "IDR",
-            "address": null,
-            "payment_data": {
-                "account_number": "FR2213127390004078439692S06",
-                "account_name": "Joanne Smith",
-                "routing_number": "SWIFT42345",
-                "account_type": "iban",
-                "address": {
-                    "line1": "456 Market Ave",
-                    "line2": null,
-                    "city": "Paris",
-                    "state": "Île-de-France",
-                    "postal_code": "75001",
-                    "country": "FR"
-                },
-                "iban_account_number": "FR2213127390004078439692S06",
-                "iban_bic": "BNPAFRPP",
-                "iban_country": "FR",
-                "account_owner_type": "individual",
-                "first_name": "Joanne",
-                "last_name": "Smith"
-            },
-            "created_at": "2025-02-15T12:36:53.000000Z",
-            "user_id": 4,
-            "bridge_id": null,
-            "bridge_customer_id": null,
-            "bridge_response": null,
-            "gateway": {
-                "id": 333,
-                "method_name": "Bank Artha Graha",
-                "country": "IDN",
-                "currency": "IDR",
-                "payment_method_code": null,
-                "cutoff_hrs_start": "1",
-                "cutoff_hrs_end": "15",
-                "base_currency": "USD",
-                "exchange_rate_float": null
-            }
-        },
-        {
-            "id": 2,
-            "gateway_id": 505,
-            "beneficiary_id": null,
-            "nickname": "palmpay",
-            "currency": "CLP",
-            "address": null,
-            "payment_data": {
-                "accountNumber": "8188572925"
-            },
-            "created_at": "2025-02-13T21:08:49.000000Z",
-            "user_id": 4,
-            "bridge_id": null,
-            "bridge_customer_id": null,
-            "bridge_response": null,
-            "gateway": {
-                "id": 505,
-                "method_name": "Bank Transfer",
-                "country": "CHL",
-                "currency": "CLP",
-                "payment_method_code": null,
-                "cutoff_hrs_start": null,
-                "cutoff_hrs_end": null,
-                "base_currency": "CLP",
-                "exchange_rate_float": null
-            }
-        }
-    ]
-}
+  "status": "success",
+  "status_code": 200,
+  "message": "Request successful",
+  "data": [
+    {
+      "id": 12,
+      "gateway_id": 505,
+      "beneficiary_id": null,
+      "nickname": "CHL acct",
+      "currency": "CLP",
+      "address": null,
+      "payment_data": {
+        "beneficiary_id": "000000000",
+        "beneficiary_name": "Sample Beneficiary",
+        "beneficiary_account": "12345678",
+        "beneficiary_account_type": "2",
+        "beneficiary_bank_code": "001",
+        "beneficiary_email": "example@example.com",
+        "description": "transfer"
+      },
+      "created_at": "2025-02-17T13:35:19.000000Z",
+      "user_id": 4,
+      "gateway": {
+        "id": 505,
+        "method_name": "Bank Transfer",
+        "country": "CHL",
+        "currency": "CLP",
+        "base_currency": "CLP"
+      }
+    },
+    {
+      "id": 11,
+      "gateway_id": 2,
+      "nickname": "COL acct",
+      "currency": "COP",
+      "payment_data": {
+        "bankAccount": "000-000000-00",
+        "AccountType": "2",
+        "bankCode": "000"
+      },
+      "created_at": "2025-02-17T13:22:48.000000Z",
+      "user_id": 4,
+      "gateway": {
+        "id": 2,
+        "method_name": "Bank Transfer",
+        "country": "COL",
+        "currency": "COP",
+        "base_currency": "USD"
+      }
+    },
+    {
+      "id": 10,
+      "gateway_id": 501,
+      "nickname": "Peru acct",
+      "currency": "PEN",
+      "payment_data": {
+        "beneficiary_first_name": "John",
+        "beneficiary_last_name": "Doe",
+        "beneficiary_email": "john.doe@example.com",
+        "beneficiary_address": "123 Example Street",
+        "city": "Lima",
+        "phone": "000000",
+        "beneficiary_document_type": "DNI",
+        "beneficiary_document_number": 12345678,
+        "bank_code": 123,
+        "account_type_bank": "c",
+        "account_bank": "00000000000000000000",
+        "fc_customer_type": "natural",
+        "fc_legal_name": "John Doe",
+        "fc_document_type": "DNI",
+        "fc_document_number": 12345678,
+        "fc_legal_address": "123 Example Street",
+        "fc_birthdate": "1990-01-01",
+        "purpose": "TEST",
+        "purpose_comentary": "Payment"
+      },
+      "created_at": "2025-02-17T13:06:48.000000Z",
+      "user_id": 4,
+      "gateway": {
+        "id": 501,
+        "method_name": "Bank Transfer",
+        "country": "PER",
+        "currency": "PEN",
+        "base_currency": "USD"
+      }
+    },
+    {
+      "id": 9,
+      "gateway_id": 1,
+      "nickname": "MXN acct",
+      "currency": "MXN",
+      "payment_data": {
+        "clabe": "000000000000000000",
+        "beneficiary": "Jane Doe"
+      },
+      "created_at": "2025-02-17T12:41:32.000000Z",
+      "user_id": 4,
+      "gateway": {
+        "id": 1,
+        "method_name": "SPEI",
+        "country": "MEX",
+        "currency": "MXN",
+        "base_currency": "USD"
+      }
+    },
+    {
+      "id": 8,
+      "gateway_id": 494,
+      "nickname": "BRA acct",
+      "currency": "BRL",
+      "payment_data": {
+        "taxId": "00000000000",
+        "pixKey": "00000000000"
+      },
+      "created_at": "2025-02-17T12:15:52.000000Z",
+      "user_id": 4,
+      "gateway": {
+        "id": 494,
+        "method_name": "Pix",
+        "country": "BRA",
+        "currency": "BRL",
+        "base_currency": "USD,BRL"
+      }
+    },
+    {
+      "id": 7,
+      "gateway_id": 492,
+      "nickname": "Arg acct",
+      "currency": "ARS",
+      "payment_data": {
+        "beneficiary_type": "Individual",
+        "beneficiary_first_name": "Alex",
+        "beneficiary_last_name": "Smith",
+        "beneficiary_email": "alex.smith@example.com",
+        "beneficiary_address": "Unknown",
+        "beneficiary_document_type": "CUIL",
+        "beneficiary_document_number": "00000000000",
+        "bank_code": "00",
+
 ```
 
 ### **Step 5: Initiate Payout**
@@ -3208,22 +3023,23 @@ _POST \{{host\}}/wallet/payout_
 * **Authentication:** All requests must be authenticated using an API key.
 * **Idempotency:** POST requests require a unique Idempotency-Key header to ensure duplicate requests are not processed multiple times.
 
-For further support, please contact Us.
-
 ```json
 {
-    "gateway_id": 184,
-    "nickname": "EUR acct",
-    "currency": "EUR",
-    "payment_data": {
-    "account_number" : "8339856447",
-    "account_name" : "Michael Chukwuka Bernard",
-    "routing_number" : "026073150",
+  "gateway_id": 184,
+  "nickname": "EUR acct",
+  "currency": "EUR",
+  "payment_data": {
+    "account_number": "1234567890",
+    "account_name": "John Doe",
+    "routing_number": "111000025",
     "account_type": "iban",
-    "beneficiary_bank_code": "016",
-    "beneficiary_email": "michael@yativo.com",
+    "beneficiary_bank_code": "001",
+    "beneficiary_email": "john.doe@example.com",
     "description": "transfer"
+  }
+  // "customer_id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 }
-    //"customer_id": "d2be5158-ea3f-40ab-88e8-7c7d10fa04f4"
-}
+
 ```
+
+For further support, please contact Us.
