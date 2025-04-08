@@ -31,7 +31,7 @@ url = "{{baseUrl}}/beneficiaries/list"
 
 payload = {}
 headers = {
-  'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+  'Authorization': 'Bearer eyJ0exxxxxxxxxxxxxxxxxxxx'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
