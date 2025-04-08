@@ -22,6 +22,6 @@ Then make a Post request&#x20;
     "gateway": 235,
     "amount": 109,
     "currency": "USD"
-    // "customer_id": "845a0c7a-33ae-4449-9239-76d0803aadbc"
+    // "customer_id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxx"
 }
 </code></pre>
